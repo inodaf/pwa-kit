@@ -1,0 +1,6 @@
+{
+  "name": "<your app name>",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/?source=pwa"
+}
