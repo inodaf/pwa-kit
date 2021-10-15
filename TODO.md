@@ -1,7 +1,7 @@
 ## Base
 - [x] Next.js with TypeScript + Paths
 - [x] Environment Variables
-- [ ] First Class PWA Ready Support
+- [x] First Class PWA Ready Support
 
 ## Quality
 - [ ] Unit Tests with Jest + @testing-library/react,hooks
