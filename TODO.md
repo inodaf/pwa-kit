@@ -1,6 +1,6 @@
 ## Base
-- [ ] Next.js with TypeScript + Paths
-- [ ] Environment Variables
+- [x] Next.js with TypeScript + Paths
+- [x] Environment Variables
 - [ ] First Class PWA Ready Support
 
 ## Quality
