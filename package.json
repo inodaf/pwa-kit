@@ -1,0 +1,10 @@
+{
+  "name": "pwa-starter",
+  "version": "1.0.0",
+  "description": "Template for Frontend Development with Next.js + TypeScript",
+  "main": "index.js",
+  "repository": "git@github.com:inodaf/pwa-starter.git",
+  "author": "Isac Fadoni",
+  "license": "MIT",
+  "private": true
+}
