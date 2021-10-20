@@ -1,0 +1,11 @@
+- [ ] Next.js with TypeScript + Paths
+- [ ] Environment Variables
+- [ ] First Class PWA Ready Support
+- [ ] Unit Tests with Jest + @testing-library/react
+- [ ] Code Format with Prettier
+- [ ] Linting with TSLint
+- [ ] E2E Tests with Cypress
+- [ ] CI with GitHub Actions
+- [ ] Deployment + Preview with Netlify
+- [ ] Analytics with Google Analytics
+- [ ] Observability with New Relic
