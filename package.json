@@ -12,11 +12,13 @@
     "build:prod": "env-cmd -f config/envs/.env.production next build",
     "start:stag": "env-cmd -f config/envs/.env.staging next start",
     "start:prod": "env-cmd -f config/envs/.env.production next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "clear && jest -i",
+    "test:w": "clear && jest -i --watch"
   },
   "dependencies": {
     "env-cmd": "^10.1.0",
-    "next": "^11.1.2",
+    "next": "^12.0.3",
     "next-pwa": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,10 +26,72 @@
     "workbox-routing": "^6.3.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.2",
     "@types/node": "^16.11.4",
     "@types/react": "^17.0.31",
     "@types/workbox-precaching": "^4.3.1",
     "@types/workbox-routing": "^4.3.1",
+    "eslint": "<8.0.0",
+    "eslint-config-next": "12.0.3",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "projects": [
+      {
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        },
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "jsx",
+          "json"
+        ],
+        "moduleNameMapper": {
+          "^@/(.*)$": "<rootDir>/src/$1",
+          "^@config/(.*)$": "<rootDir>/config/$1"
+        },
+        "displayName": "node-env",
+        "testMatch": [
+          "<rootDir>/src/**/__tests__/*.test.ts"
+        ]
+      },
+      {
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        },
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "jsx",
+          "json"
+        ],
+        "moduleNameMapper": {
+          "^@/(.*)$": "<rootDir>/src/$1",
+          "^@config/(.*)$": "<rootDir>/config/$1"
+        },
+        "displayName": "browser-env",
+        "testEnvironment": "jsdom",
+        "testMatch": [
+          "<rootDir>/src/**/__tests__/*.test.tsx"
+        ],
+        "setupFilesAfterEnv": [
+          "@testing-library/react/dont-cleanup-after-each",
+          "@testing-library/jest-dom/extend-expect"
+        ]
+      }
+    ]
+  },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals"
   }
 }

@@ -1,4 +1,4 @@
-import { Greetings } from "@/views/components/Greetings";
+import { Greetings } from "@/views/components/greetings";
 
 export default function IndexPage() {
   return <Greetings />;

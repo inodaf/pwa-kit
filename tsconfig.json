@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -19,9 +19,14 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "paths": {
-      "@/*": ["src/*"],
-      "@config/*": ["config/*"]
-    }
+      "@/*": [
+        "src/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ]
+    },
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
