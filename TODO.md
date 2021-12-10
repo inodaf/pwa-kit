@@ -4,8 +4,8 @@
 - [x] First Class PWA Ready Support
 
 ## Quality
-- [ ] Unit Tests with Jest + @testing-library/react,hooks
-- [ ] Linting with TSLint
+- [x] Unit Tests with Jest (@swc/jest) + @testing-library/react,hooks
+- [ ] Linting with TypeScript+ESLint
 - [ ] Code Format with Prettier
 - [ ] E2E Tests with Cypress
 

@@ -3,7 +3,7 @@
 import { matchPrecache } from "workbox-precaching/matchPrecache";
 import { precacheAndRoute } from "workbox-precaching/precacheAndRoute";
 import { setCatchHandler } from "workbox-routing/setCatchHandler";
-import { isOfflineAvailable } from "@/infra/utils/offline-experience";
+import { isOfflineAvailable } from "@/utilities/offline-experience";
 
 const WB_MANIFEST = self.__WB_MANIFEST;
 const DEFAULT_REV = WB_MANIFEST[0].revision;

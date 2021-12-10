@@ -14,7 +14,8 @@
     "start:prod": "env-cmd -f config/envs/.env.production next start",
     "lint": "next lint",
     "test": "clear && jest -i",
-    "test:w": "clear && jest -i --watch"
+    "test:w": "clear && jest -i --watch",
+    "t": "yarn test"
   },
   "dependencies": {
     "env-cmd": "^10.1.0",
@@ -26,6 +27,8 @@
     "workbox-routing": "^6.3.0"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.119",
+    "@swc/jest": "^0.2.12",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -42,54 +45,28 @@
     "typescript": "^4.4.4"
   },
   "jest": {
-    "preset": "ts-jest",
-    "projects": [
-      {
-        "transform": {
-          "^.+\\.tsx?$": "ts-jest"
-        },
-        "moduleFileExtensions": [
-          "ts",
-          "tsx",
-          "js",
-          "jsx",
-          "json"
-        ],
-        "moduleNameMapper": {
-          "^@/(.*)$": "<rootDir>/src/$1",
-          "^@config/(.*)$": "<rootDir>/config/$1"
-        },
-        "displayName": "node-env",
-        "testMatch": [
-          "<rootDir>/src/**/__tests__/*.test.ts"
-        ]
-      },
-      {
-        "transform": {
-          "^.+\\.tsx?$": "ts-jest"
-        },
-        "moduleFileExtensions": [
-          "ts",
-          "tsx",
-          "js",
-          "jsx",
-          "json"
-        ],
-        "moduleNameMapper": {
-          "^@/(.*)$": "<rootDir>/src/$1",
-          "^@config/(.*)$": "<rootDir>/config/$1"
-        },
-        "displayName": "browser-env",
-        "testEnvironment": "jsdom",
-        "testMatch": [
-          "<rootDir>/src/**/__tests__/*.test.tsx"
-        ],
-        "setupFilesAfterEnv": [
-          "@testing-library/react/dont-cleanup-after-each",
-          "@testing-library/jest-dom/extend-expect"
-        ]
-      }
-    ]
+    "transform": {
+      "^.+\\.tsx?$": "@swc/jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/unit/**/*.test.ts(x)?"
+    ],
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/react/dont-cleanup-after-each",
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^@config/(.*)$": "<rootDir>/config/$1"
+    }
   },
   "eslintConfig": {
     "extends": "next/core-web-vitals"
