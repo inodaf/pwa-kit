@@ -9,6 +9,8 @@ const WB_MANIFEST = self.__WB_MANIFEST;
 const DEFAULT_REV = WB_MANIFEST[0].revision;
 const DEFAULT_OFFLINE_PAGE = "/offline";
 
+console.log("[Service Worker]", WB_MANIFEST);
+
 // Cache Pages for Offline Usage.
 WB_MANIFEST.push({ url: "/offline", revision: DEFAULT_REV });
 WB_MANIFEST.push({ url: "/", revision: DEFAULT_REV });

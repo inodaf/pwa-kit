@@ -8,6 +8,6 @@ module.exports = withPWA({
     dest: "public",
     register: canRegisterSW,
     mode: process.env.NODE_ENV || "development",
-    swSrc: "./src/infra/workers/service-worker.ts",
+    swSrc: "./src/configurations/workers/service-worker.ts",
   },
 });
