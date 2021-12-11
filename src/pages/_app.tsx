@@ -1,6 +1,9 @@
+import type { AppProps } from "next/app";
+
+import React from "react";
 import Head from "next/head";
 
-function App({ Component, pageProps }): JSX.Element {
+function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>

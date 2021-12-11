@@ -18,7 +18,10 @@ setCatchHandler(async (context) => {
   if (context.event.request.destination === "document") {
     const { pathname } = context.url;
     const offline = isOfflineAvailable(pathname, WB_MANIFEST);
-    return matchPrecache(offline ? pathname : DEFAULT_OFFLINE_PAGE);
+    const match = await matchPrecache(
+      offline ? pathname : DEFAULT_OFFLINE_PAGE
+    );
+    return match || Response.error();
   }
   return Response.error();
 });
