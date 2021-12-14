@@ -1,4 +1,4 @@
-import { isBrowser } from "@/utilities/is-browser";
+import { isBrowser } from "@/utilities";
 
 if (process.env.NODE_ENV === "development") {
   if (isBrowser) {

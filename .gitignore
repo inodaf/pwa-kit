@@ -106,6 +106,8 @@ dist
 
 # Next PWA
 public/sw.js
+public/workbox-*.js
+public/worker-*.js
 
 # macOS files
 .DS_Store
