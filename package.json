@@ -76,7 +76,7 @@
     "setupFilesAfterEnv": [
       "@testing-library/react/dont-cleanup-after-each",
       "@testing-library/jest-dom/extend-expect",
-      "./config/tests/setup-msw.ts"
+      "./config/mocks/setup-tests.ts"
     ],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1",
