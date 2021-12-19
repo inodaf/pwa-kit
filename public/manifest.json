@@ -1,6 +1,28 @@
 {
   "name": "<your app name>",
-  "orientation": "portrait",
+  "description": "<add your app's description>",
   "scope": "/",
-  "start_url": "/?source=pwa"
+  "start_url": "/?source=pwa",
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#FFF",
+  "theme_color": "#FFF",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "type": "image/png",
+      "src": "/add-your-196-maskable-icon-to-manifest.png",
+      "sizes": "196x196"
+    },
+    {
+      "type": "image/webp",
+      "src": "/add-your-192-icon-to-manifest.webp",
+      "sizes": "192x192"
+    },
+    {
+      "type": "image/png",
+      "src": "/add-your-512-icon-to-manifest.png",
+      "sizes": "512x512"
+    }
+  ]
 }

@@ -1,11 +1,8 @@
 {
   "name": "pwa-starter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Template for Frontend Development with Next.js + TypeScript",
-  "repository": "git@github.com:inodaf/pwa-starter.git",
-  "author": "Isac Fadoni",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "env-cmd -f config/envs/.env.development next dev",
     "build:stag": "env-cmd -f config/envs/.env.staging next build",
@@ -16,14 +13,14 @@
     "fmt": "prettier --write '(src|tests)/**/*.{ts,tsx,json}'",
     "lint:check": "eslint . --ext .ts,.tsx",
     "fmt:check": "prettier --check '(src|tests)/**/*.{ts,tsx,json}'",
-    "test": "clear && jest -i",
-    "test:w": "clear && jest -i --watch",
-    "test:c": "clear && jest -i --coverage",
+    "test": "jest -i",
+    "test:w": "jest -i --watch",
+    "test:c": "jest -i --coverage",
     "t": "yarn test"
   },
   "dependencies": {
     "env-cmd": "^10.1.0",
-    "next": "^12.0.3",
+    "next": "^12.0.7",
     "next-pwa": "^5.4.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

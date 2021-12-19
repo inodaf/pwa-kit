@@ -12,7 +12,7 @@
 - [x] Linting with TypeScript+ESLint
 - [x] Code Format with Prettier
 - [x] Coverage Reports
-- [ ] Mocking with MSW
+- [x] Mocking with MSW
 - [ ] E2E Tests with Cypress
 
 ## CI + Deployment
