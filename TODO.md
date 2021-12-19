@@ -3,8 +3,8 @@
 - [x] Next.js with TypeScript + Paths
 - [x] Environment Variables
 - [x] First Class PWA Ready Support
-- [ ] React Query
-- [ ] Tailwind CSS
+- [x] React Query
+- [x] Tailwind CSS
 
 ## Quality
 

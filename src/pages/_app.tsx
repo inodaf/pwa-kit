@@ -3,7 +3,9 @@ import type { AppProps } from "next/app";
 import React from "react";
 import Head from "next/head";
 
+import { ReactQueryProvider } from "@/configurations/providers/react-query";
 import "@/configurations/workers/mocks";
+import "@/configurations/styles/globals.css";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -27,7 +29,9 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <Component {...pageProps} />
+      <ReactQueryProvider>
+        <Component {...pageProps} />
+      </ReactQueryProvider>
     </>
   );
 }
