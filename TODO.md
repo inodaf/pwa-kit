@@ -17,7 +17,7 @@
 
 ## CI + Deployment
 
-- [ ] CI with GitHub Actions
+- [x] CI with GitHub Actions
 - [ ] Deployment + Preview with Netlify
 - [ ] Lighthouse CI
 

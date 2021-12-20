@@ -1,0 +1,56 @@
+name: check
+on: pull_request
+
+jobs:
+  # Setup Node.js and install
+  # project dependencies with yarn.
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.13.0"
+          cache: "yarn"
+      - name: "Installing Dependencies"
+        run: yarn
+
+  # Check source code for lints.
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.13.0"
+          cache: "yarn"
+      - name: "Check Linting"
+        run: yarn && yarn lint:check
+
+  # Check source code code formatting issues.
+  format:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.13.0"
+          cache: "yarn"
+      - name: "Check Format"
+        run: yarn && yarn fmt:check
+
+  # Runs the tests without
+  # generating the Coverage report.
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.13.0"
+          cache: "yarn"
+      - name: "Testing"
+        run: yarn && yarn test
