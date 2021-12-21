@@ -22,7 +22,7 @@
 - 🐞 Linting with [TypeScript ESLint](https://typescript-eslint.io)
 - 📝 Code Format with [Prettier](https://prettier.io)
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
-- 🌲 E2E Tests with [Cypress](https://www.cypress.io/)
+- 🌲 E2E Tests with [Cypress](https://www.cypress.io/) _soon_
 
 **CI + Deployment**
 
