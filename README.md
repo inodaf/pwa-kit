@@ -12,7 +12,7 @@
 
 - ⚡️ Next.js with TypeScript + Paths
 - 🍃 Env Vars for `Production`, `Staging`, and `Development`
-- 📱 First Class PWA Ready Support
+- 📱 First Class PWA Support
 - 👩‍🎤 Support for [TailwindCSS](https://tailwindcss.com)
 - ⚛️ Support for [React Query](https://react-query.tanstack.com)
 
