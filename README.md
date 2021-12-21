@@ -61,7 +61,7 @@ yarn
 The command bellow will spawn the Dev Server and also load the Env Vars from `.env`, `.env.development` and `.env.local`.
 
 ```sh
-# spawns a server process at http://localhost:3000
+# spawns the Next.js Server at http://localhost:3000
 yarn dev
 ```
 
