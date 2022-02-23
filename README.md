@@ -1,7 +1,6 @@
 # PWA Starter · Enterprise Applications
 
-![Next.js](https://img.shields.io/badge/-Next.js%20-black.svg)
-![TypeScript](https://img.shields.io/badge/-TypeScript-white.svg)
+![Next.js](https://img.shields.io/badge/TypeScript-Next.js%20-white.svg)
 ![Testing with Jest](https://img.shields.io/badge/Testing-Jest-pink.svg)
 ![Code Format by Prettier](https://img.shields.io/badge/Format-Prettier-coral.svg)
 ![Code Lint with TypeScript ESLint](https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg)
