@@ -1,12 +1,14 @@
 # PWA Starter · Enterprise Applications
 
+![Next.js](https://img.shields.io/badge/-Next.js%20-black.svg)
+![TypeScript](https://img.shields.io/badge/-TypeScript-white.svg)
 ![Testing with Jest](https://img.shields.io/badge/Testing-Jest-pink.svg)
 ![Code Format by Prettier](https://img.shields.io/badge/Format-Prettier-coral.svg)
 ![Code Lint with TypeScript ESLint](https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg)
 
-**Rapid development with a fully featured environment w/ Next.js and TypeScript.**
+Starting a new WebApp project should be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on the solution without compromising the best practices.
 
-### The Stack
+## The Stack
 
 **Base**
 
@@ -32,7 +34,7 @@
 
 ---
 
-### Getting Started
+## Getting Started
 
 Base commands for develop, test and build.
 
@@ -96,9 +98,9 @@ yarn fmt       # checks formatting and fixes issues
 
 ---
 
-### Building
+## Building
 
-We separate builds per environment: Production or Staging. For both environments the `NODE_ENV` is set to `production`.
+Builds are separated by environments: Production or Staging. For both environments the `NODE_ENV` is set to `production`.
 
 **Production**
 
