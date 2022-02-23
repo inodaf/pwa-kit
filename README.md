@@ -5,7 +5,7 @@
 ![Code Format by Prettier](https://img.shields.io/badge/Format-Prettier-coral.svg)
 ![Code Lint with TypeScript ESLint](https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg)
 
-Starting a new WebApp project should be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on the solution without compromising the best practices.
+Starting a new WebApp project should be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on the solution without compromising best practices.
 
 ## The Stack
 
