@@ -11,9 +11,9 @@
 **Base**
 
 - ⚡️ Next.js with TypeScript + Paths
-- 🍃 Env Vars for `Production`, `Staging`, and `Development`
+- 🍃 Env Vars for `Production`, `Staging` and `Development`
 - 📱 First Class PWA Support
-- 👩‍🎤 Support for [TailwindCSS](https://tailwindcss.com)
+- 👩‍🎤 CSS Styling with [TailwindCSS](https://tailwindcss.com)
 - ⚛️ Support for [React Query](https://react-query.tanstack.com)
 
 **Quality**
@@ -24,9 +24,13 @@
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
 - 🌲 E2E Tests with [Cypress](https://www.cypress.io/) _soon_
 
+**Accessibility**
+
+- 🧏‍♀️ Linting with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+
 **CI + Deployment**
 
-- 📍 GitHub Actions for Lint, Format and Testing
+- 📍 GitHub Actions for Test, Lint and Format
 - 🚀 Deployment + Preview with Netlify _soon_
 - 🚥 Lighthouse CI for each Pull Request _soon_
 
