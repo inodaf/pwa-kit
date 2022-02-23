@@ -27,7 +27,7 @@ Starting a new WebApp project should be easy. **PWA Starter** provides a fully f
 
 **Accessibility**
 
-- 🧏‍♀️ Linting with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- 🧏‍♀️ Linting JSX _a11y_ with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
 **CI + Deployment**
 
