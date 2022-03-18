@@ -122,3 +122,6 @@ Refer to `./config/envs/.env.staging` for the environment variables.
 yarn build:stag # builds with staging bindings
 yarn start:stag # starts the built app with staging bindings
 ```
+
+## License
+The **template** itself is MIT licensed. However if needed, you must change it after creating your project on top of this template.
