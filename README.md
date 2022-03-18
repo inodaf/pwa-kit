@@ -124,4 +124,4 @@ yarn start:stag # starts the built app with staging bindings
 ```
 
 ## License
-The **template** itself is MIT licensed. However if needed, you must change it after creating your project on top of this template.
+Altough this **template** itself is MIT licensed, if needed, you must change the license after creating your project.
