@@ -1,8 +1,15 @@
 /* eslint-disable no-undef */
 const withPWA = require("next-pwa");
 
-module.exports = withPWA({
+/** @type {import('next').NextConfig} */
+const config = {
   swcMinify: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+};
+
+module.exports = withPWA({
+  ...config,
   pwa: {
     dest: "public",
     register: true,
