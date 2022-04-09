@@ -13,6 +13,10 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>WebApp</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="My WebApp bootstraped from inodaf/pwa-starter"
+        />
         <link
           rel="apple-touch-icon"
           href="/add-your-192-apple-touch-icon.png"
