@@ -111,3 +111,6 @@ public/worker-*.js
 
 # macOS files
 .DS_Store
+
+# msw files
+public/mockServiceWorker.js
