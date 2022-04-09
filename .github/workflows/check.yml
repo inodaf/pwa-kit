@@ -28,7 +28,7 @@ jobs:
       - name: "Check Linting"
         run: yarn && yarn lint:check
 
-  # Check source code code formatting issues.
+  # Check source code formatting issues.
   format:
     needs: setup
     runs-on: ubuntu-latest
