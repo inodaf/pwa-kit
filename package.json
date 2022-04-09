@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "env-cmd": "^10.1.0",
-    "next": "^12.1.0",
-    "next-pwa": "^5.4.4",
+    "next": "^12.1.4",
+    "next-pwa": "^5.4.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.34.5",
@@ -72,7 +72,7 @@
       "json"
     ],
     "testMatch": [
-      "<rootDir>/tests/unit/**/*.test.ts(x)?"
+      "<rootDir>/tests/(unit|integration)/**/*.test.ts(x)?"
     ],
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
@@ -106,16 +106,16 @@
       "plugin:jsx-a11y/recommended",
       "prettier"
     ],
-    "ignorePatterns": [
-      "node_modules",
-      ".next"
-    ],
     "settings": {
       "react": {
         "version": "detect"
       }
     }
   },
+  "eslintIgnore": [
+    "node_modules",
+    ".next"
+  ],
   "postcss": {
     "plugins": [
       "tailwindcss",
