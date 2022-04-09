@@ -4,7 +4,7 @@
   "description": "Template for Frontend Development with Next.js + TypeScript",
   "license": "MIT",
   "scripts": {
-    "prepare": "if [ -z GITHUB_ACTIONS ]; then echo \"ci\"; else yarn msw init public/ --save; fi;",
+    "prepare": "if [ -z $GITHUB_ACTIONS ]; then echo \"ci\"; else yarn msw init public/ --save; fi;",
     "dev": "env-cmd -f config/envs/.env.development next dev",
     "build:stag": "env-cmd -f config/envs/.env.staging next build",
     "build:prod": "env-cmd -f config/envs/.env.production next build",
