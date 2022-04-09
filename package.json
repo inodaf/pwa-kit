@@ -4,6 +4,7 @@
   "description": "Template for Frontend Development with Next.js + TypeScript",
   "license": "MIT",
   "scripts": {
+    "prepare": "yarn msw init public/ --save",
     "dev": "env-cmd -f config/envs/.env.development next dev",
     "build:stag": "env-cmd -f config/envs/.env.staging next build",
     "build:prod": "env-cmd -f config/envs/.env.production next build",
