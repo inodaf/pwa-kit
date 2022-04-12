@@ -1,5 +1,5 @@
 <h1>
-  <img src="./.github/projecticon.svg" width="140" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
+  <img src="./.github/projecticon.svg" width="96" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
   <div>
     PWA Starter · Enterprise Applications
     <div>
