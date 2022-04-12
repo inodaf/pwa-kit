@@ -1,4 +1,8 @@
-# PWA Starter · Enterprise Applications
+<h1>
+  <img style="vertical-align: bottom" src="./.github/projecticon.png" width="64" />
+  PWA Starter · Enterprise Applications
+</h1>
+<!-- # PWA Starter · Enterprise Applications -->
 
 ![Next.js](https://img.shields.io/badge/TypeScript-Next.js%20-white.svg)
 ![Testing with Jest](https://img.shields.io/badge/Testing-Jest-pink.svg)
@@ -124,4 +128,5 @@ yarn start:stag # starts the built app with staging bindings
 ```
 
 ## License
+
 Altough this **template** itself is MIT licensed, if needed, you must change the license after creating your project.
