@@ -1,8 +1,6 @@
-<h1>
-  <img style="vertical-align: bottom" src="./.github/projecticon.png" width="64" />
-  PWA Starter · Enterprise Applications
-</h1>
-<!-- # PWA Starter · Enterprise Applications -->
+<img src="./.github/projecticon.png" width="82" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
+
+# PWA Starter · Enterprise Applications
 
 ![Next.js](https://img.shields.io/badge/TypeScript-Next.js%20-white.svg)
 ![Testing with Jest](https://img.shields.io/badge/Testing-Jest-pink.svg)
