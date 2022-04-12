@@ -31,6 +31,11 @@ Starting a new WebApp project should be easy. **PWA Starter** provides a fully f
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
 - 🌲 E2E Tests with [Cypress](https://www.cypress.io/) _soon_
 
+**Security**
+
+- 👮‍♂️ Default CSP support defined via [Envs](./config/envs/.env.production)
+- 🔍 CI Sec Inspection with [Mozilla Observatory](https://observatory.mozilla.org/) _soon_
+
 **Accessibility**
 
 - 🧏‍♀️ Linting JSX _a11y_ with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
