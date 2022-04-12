@@ -1,5 +1,5 @@
 <h1>
-  <img style="vertical-align: middle;" src="./.github/projecticon.png" width="140" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
+  <img src="./.github/projecticon.svg" width="140" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
   <div>
     PWA Starter · Enterprise Applications
     <div>
@@ -7,9 +7,8 @@
       <img src="https://img.shields.io/badge/Testing-Jest-pink.svg" />
       <img src="https://img.shields.io/badge/Format-Prettier-coral.svg" />
       <img src="https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg" />
-    </div>  
+    </div>
   </div>
-  
 </h1>
 
 Starting a new WebApp project should be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on the solution without compromising best practices.
