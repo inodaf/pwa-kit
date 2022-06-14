@@ -39,6 +39,7 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 **Accessibility**
 
 - 🧏‍♀️ Linting JSX _a11y_ with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- 🪓 Testing with [Axe Core](https://github.com/dequelabs/axe-core) _soon_
 
 **CI + Deployment**
 
@@ -131,6 +132,17 @@ Refer to `./config/envs/.env.staging` for the environment variables.
 pnpm build:stag # builds with staging bindings
 pnpm start:stag # starts the built app with staging bindings
 ```
+
+## Cleanup
+
+Whenever you need a fresh start in case something is going wrong, you can leverage handy cleanup commands.
+
+```sh
+pnpm cleanup # remove caches and temp files
+pnpm cleanup:hard # same as above but also remove `node_modules`
+```
+
+---
 
 ## License
 
