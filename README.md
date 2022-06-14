@@ -11,7 +11,7 @@
   </div>
 </h1>
 
-Starting a new WebApp project should be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on the solution without compromising best practices.
+Starting a new Web App needs to be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on code delivery without compromising best practices.
 
 ## The Stack
 
@@ -39,6 +39,7 @@ Starting a new WebApp project should be easy. **PWA Starter** provides a fully f
 **Accessibility**
 
 - 🧏‍♀️ Linting JSX _a11y_ with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- 🪓 Testing with [Axe Core](https://github.com/dequelabs/axe-core) _soon_
 
 **CI + Deployment**
 
@@ -54,22 +55,20 @@ Base commands for develop, test and build.
 
 **Requirements**
 
-- Node.js Version Manager: [nvm](https://github.com/nvm-sh/nvm)
-- Package Manager: [yarn](https://yarnpkg.com)
+- Node.js Toolchain Manager: [Volta](https://volta.sh)
+- Package Manager: [pnpm](https://pnpm.io/installation)
 
 **Prepare Development**
 
 ```sh
-# install the Node.js version specified at .nvmrc.
-# we will always opt for the latest LTS version.
-nvm use
+# install the Node.js version specified at package.json.
+# we will always opt for the active LTS version.
+volta fetch node
 ```
-
-> **Note**: If asked, install the version before using it with `nvm install <version>`.
 
 ```sh
 # install project dependencies
-yarn
+pnpm install
 ```
 
 **Development Server**
@@ -78,7 +77,7 @@ The command bellow will spawn the Dev Server and also load the Env Vars from `.e
 
 ```sh
 # spawns the Next.js Server at http://localhost:3000
-yarn dev
+pnpm dev
 ```
 
 **Testing**
@@ -86,10 +85,10 @@ yarn dev
 There are multiple ways for running the tests.
 
 ```sh
-yarn test   # run tests without watch
-yarn test:w # run tests with watch
-yarn test:c # run tests with coverage
-yarn t      # alias for `yarn test`
+pnpm test   # run tests without watch
+pnpm test:w # run tests with watch
+pnpm test:c # run tests with coverage
+pnpm t      # alias for `pnpm test`
 ```
 
 **Linting**
@@ -97,8 +96,8 @@ yarn t      # alias for `yarn test`
 We split the process into Check and Fix commands.
 
 ```sh
-yarn lint:check # checks linting without fixing (useful for CI)
-yarn lint       # checks linting and fixes issues
+pnpm lint:check # checks linting without fixing (useful for CI)
+pnpm lint       # checks linting and fixes issues
 ```
 
 **Code Formatting**
@@ -106,23 +105,23 @@ yarn lint       # checks linting and fixes issues
 We also split the process into Check and Fix commands.
 
 ```sh
-yarn fmt:check # checks formatting without fixing (useful for CI)
-yarn fmt       # checks formatting and fixes issues
+pnpm fmt:check # checks formatting without fixing (useful for CI)
+pnpm fmt       # checks formatting and fixes issues
 ```
 
 ---
 
 ## Building
 
-Builds are separated by environments: Production or Staging. For both environments the `NODE_ENV` is set to `production`.
+Builds are separated by environments: Production and Staging. For both environments the `NODE_ENV` is set to `production`.
 
 **Production**
 
 Refer to `./config/envs/.env.production` for the environment variables.
 
 ```sh
-yarn build:prod # builds with production bindings
-yarn start:prod # starts the built app with production bindings
+pnpm build:prod # builds with production bindings
+pnpm start:prod # starts the built app with production bindings
 ```
 
 **Staging**
@@ -130,9 +129,20 @@ yarn start:prod # starts the built app with production bindings
 Refer to `./config/envs/.env.staging` for the environment variables.
 
 ```sh
-yarn build:stag # builds with staging bindings
-yarn start:stag # starts the built app with staging bindings
+pnpm build:stag # builds with staging bindings
+pnpm start:stag # starts the built app with staging bindings
 ```
+
+## Cleanup
+
+Whenever you need a fresh start in case something is going wrong, you can leverage handy cleanup commands.
+
+```sh
+pnpm cleanup # remove caches and temp files
+pnpm cleanup:hard # same as above but also remove `node_modules`
+```
+
+---
 
 ## License
 

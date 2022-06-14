@@ -3,17 +3,20 @@ on: pull_request
 
 jobs:
   # Setup Node.js and install
-  # project dependencies with yarn.
+  # project dependencies with pnpm.
   setup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.13.0"
-          cache: "yarn"
+          node-version: "16.15.1"
+          cache: "pnpm"
       - name: "Installing Dependencies"
-        run: yarn install
+        run: pnpm install
 
   # Check source code for lints.
   lint:
@@ -21,13 +24,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.13.0"
-          cache: "yarn"
-      - run: yarn install
+          node-version: "16.15.1"
+          cache: "pnpm"
+      - run: pnpm install
       - name: "Check Linting"
-        run: yarn lint:check
+        run: pnpm lint:check
 
   # Check source code formatting issues.
   format:
@@ -35,13 +41,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.13.0"
-          cache: "yarn"
-      - run: yarn install
+          node-version: "16.15.1"
+          cache: "pnpm"
+      - run: pnpm install
       - name: "Check Format"
-        run: yarn fmt:check
+        run: pnpm fmt:check
 
   # Runs the tests without
   # generating the Coverage report.
@@ -50,10 +59,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.13.0"
-          cache: "yarn"
-      - run: yarn install
+          node-version: "16.15.1"
+          cache: "pnpm"
+      - run: pnpm install
       - name: "Testing"
-        run: yarn test
+        run: pnpm test

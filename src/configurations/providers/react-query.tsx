@@ -1,10 +1,12 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 
 import React from "react";
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const client = new QueryClient();
 
-export const ReactQueryProvider: FC = ({ children }) => {
+type Props = { children?: ReactNode };
+
+export const ReactQueryProvider: FC<Props> = ({ children }) => {
   return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
 };
