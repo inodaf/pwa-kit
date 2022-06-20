@@ -33,7 +33,7 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **Security**
 
-- 👮‍♂️ Default CSP support defined via [Envs](./config/envs/)
+- 👮‍♂️ Support for Content-Security-Policy
 - 🔍 CI Sec Inspection with [Mozilla Observatory](https://observatory.mozilla.org/) _soon_
 
 **Accessibility**
