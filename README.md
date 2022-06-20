@@ -25,7 +25,7 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **Quality**
 
-- 🧑‍🔬 Testing with [Jest](https://jestjs.io) + @testing-library(react, hooks) + **Coverage Reports**
+- 🧑‍🔬 Testing with [Jest](https://jestjs.io) + swc + @testing-library(react, hooks) + **Coverage Reports**
 - 🐞 Linting with [TypeScript ESLint](https://typescript-eslint.io)
 - 📝 Code Format with [Prettier](https://prettier.io)
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
@@ -33,7 +33,7 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **Security**
 
-- 👮‍♂️ Default CSP support defined via [Envs](./config/envs/.env.production)
+- 👮‍♂️ Support for Content-Security-Policy
 - 🔍 CI Sec Inspection with [Mozilla Observatory](https://observatory.mozilla.org/) _soon_
 
 **Accessibility**
@@ -73,7 +73,7 @@ pnpm install
 
 **Development Server**
 
-The command bellow will spawn the Dev Server and also load the Env Vars from `.env`, `.env.development` and `.env.local`.
+The command bellow will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
 
 ```sh
 # spawns the Next.js Server at http://localhost:3000
@@ -91,20 +91,18 @@ pnpm test:c # run tests with coverage
 pnpm t      # alias for `pnpm test`
 ```
 
-**Linting**
+**Linting & Code Formatting**
 
 We split the process into Check and Fix commands.
 
 ```sh
+# Linting
 pnpm lint:check # checks linting without fixing (useful for CI)
 pnpm lint       # checks linting and fixes issues
 ```
 
-**Code Formatting**
-
-We also split the process into Check and Fix commands.
-
 ```sh
+# Code Formatting
 pnpm fmt:check # checks formatting without fixing (useful for CI)
 pnpm fmt       # checks formatting and fixes issues
 ```

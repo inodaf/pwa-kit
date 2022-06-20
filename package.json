@@ -5,24 +5,24 @@
   "license": "MIT",
   "scripts": {
     "prepare": "if [[ -z $GITHUB_ACTIONS ]]; then pnpm msw init public/ --save; else echo \"ci\"; fi;",
-    "dev": "env-cmd -f config/envs/.env.development next dev",
-    "build:stag": "env-cmd -f config/envs/.env.staging next build",
-    "build:prod": "env-cmd -f config/envs/.env.production next build",
-    "start:stag": "env-cmd -f config/envs/.env.staging next start",
-    "start:prod": "env-cmd -f config/envs/.env.production next start",
+    "dev": "APP_ENV=development next dev",
+    "build:stag": "APP_ENV=staging next build",
+    "build:prod": "APP_ENV=production next build",
+    "start:stag": "APP_ENV=staging next start",
+    "start:prod": "APP_ENV=production next start",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "fmt": "prettier --write '(src|tests)/**/*.{ts,tsx,json}'",
     "lint:check": "eslint . --ext .ts,.tsx",
     "fmt:check": "prettier --check '(src|tests)/**/*.{ts,tsx,json}'",
-    "test": "jest -i",
-    "test:w": "jest -i --watch",
-    "test:c": "jest -i --coverage",
+    "test": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i",
+    "test:w": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i --watch",
+    "test:c": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i --coverage",
     "t": "pnpm test",
     "cleanup": "pnpm rimraf .next coverage",
     "cleanup:hard": "pnpm rimraf .next coverage node_modules"
   },
   "dependencies": {
-    "env-cmd": "^10.1.0",
+    "dotenv-flow": "^3.2.0",
     "next": "^12.1.6",
     "next-pwa": "^5.5.4",
     "react": "^18.2.0",
@@ -37,7 +37,8 @@
     "@swc/jest": "^0.2.21",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/react-hooks": "^8.0.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/dotenv-flow": "^3.2.0",
     "@types/jest": "^28.1.1",
     "@types/node": "^17.0.42",
     "@types/react": "^18.0.12",
@@ -84,6 +85,9 @@
       "<rootDir>/tests/(unit|integration)/**/*.test.ts(x)?"
     ],
     "testEnvironment": "jsdom",
+    "setupFiles": [
+      "dotenv-flow/config"
+    ],
     "setupFilesAfterEnv": [
       "@testing-library/react/dont-cleanup-after-each",
       "@testing-library/jest-dom/extend-expect",
@@ -124,7 +128,8 @@
   "eslintIgnore": [
     "node_modules",
     ".next",
-    "coverage"
+    "coverage",
+    ".vscode"
   ],
   "postcss": {
     "plugins": [

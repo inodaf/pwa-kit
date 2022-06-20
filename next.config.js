@@ -1,4 +1,6 @@
 /* eslint-disable no-undef, @typescript-eslint/no-var-requires */
+const { resolve } = require("node:path");
+const dotenv = require("dotenv-flow");
 const withPWA = require("next-pwa");
 const csp = require("./src/configurations/security/csp");
 
@@ -7,6 +9,10 @@ const config = {
   swcMinify: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
+  env: dotenv.config({
+    node_env: process.env.APP_ENV,
+    path: resolve(process.cwd(), "./config/envs"),
+  }).parsed,
   headers: async () => [
     {
       source: "/:path*",
