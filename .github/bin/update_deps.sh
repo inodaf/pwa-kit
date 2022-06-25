@@ -6,10 +6,8 @@
 setup() {
   if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;
 
-  git config user.email "$GIT_EMAIL"
-  git config user.name "$GIT_USERNAME"
-
-  echo "$GIT_EMAIL and $GIT_USERNAME"
+  git config user.email "<>"
+  git config user.name "GitHub Actions Bot"
 
   if which pnpm; then
     git checkout -b "update-dev-deps-`date +%s`"
