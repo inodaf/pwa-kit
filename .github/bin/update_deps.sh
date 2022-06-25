@@ -3,6 +3,8 @@
 # Update "devDependencies" to their latest version
 # and commits the changes.
 
+BRANCH_NAME="update-dev-deps-`date +%s`"
+
 setup() {
   if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;
 
@@ -10,7 +12,7 @@ setup() {
   git config user.name "GitHub Actions Bot"
 
   if which pnpm; then
-    git checkout -b "update-dev-deps-`date +%s`"
+    git checkout -b $BRANCH_NAME
   else
     echo "Please install 'pnpm' to proceed."
     exit
@@ -22,7 +24,9 @@ work() {
 }
 
 commit() {
-  git add . && git commit -m "chore(pkg): update dev dependencies"
+  git add .
+  git commit -m "chore(pkg): update dev dependencies"
+  git push origin $BRANCH_NAME
 }
 
 setup && work && commit
