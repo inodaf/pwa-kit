@@ -4,8 +4,12 @@
 # and commits the changes.
 
 setup() {
+  if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;
+
   git config user.email "$GIT_EMAIL"
   git config user.name "$GIT_USERNAME"
+
+  echo "$GIT_EMAIL and $GIT_USERNAME"
 
   if which pnpm; then
     git checkout -b "update-dev-deps-`date +%s`"
