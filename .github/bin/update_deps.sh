@@ -4,6 +4,9 @@
 # and commits the changes.
 
 setup() {
+  git config user.email "$GIT_EMAIL"
+  git config user.name "$GIT_USERNAME"
+
   if which pnpm; then
     git checkout -b "update-dev-deps-`date +%s`"
   else
