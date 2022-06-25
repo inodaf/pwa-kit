@@ -1,0 +1,27 @@
+on:
+  schedule:
+    - cron: "0 0 1 * *" # Run every month
+
+jobs:
+  # Setup Node.js and update
+  # dev dependencies.
+  update_dev:
+    name: "Update Dev Dependencies"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.15.1"
+          cache: "pnpm"
+      - name: "Updating Dependencies"
+        run: |
+          chmod +x .github/bin/update_deps.sh
+          ./.github/bin/update_deps.sh
+      - name: "Opening Pull Request"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr create --fill
