@@ -20,13 +20,18 @@ setup() {
 }
 
 work() {
+  # TODO: Remove the --latest option when not in template.
   pnpm up --dev --latest
 }
 
 commit() {
-  git add .
-  git commit -m "chore(pkg): update dev dependencies"
-  git push origin $BRANCH_NAME
+  if [[ -n "$(git status -s)" ]]; then
+    git add .
+    git commit -m "chore(pkg): update dev dependencies"
+    git push origin $BRANCH_NAME
+  else
+    exit 0
+  fi
 }
 
 setup && work && commit
