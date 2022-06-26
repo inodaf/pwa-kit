@@ -27,7 +27,7 @@ work() {
 commit() {
   if [[ -n "$(git status -s)" ]]; then
     git add .
-    git commit -m "chore(pkg): update dev dependencies"
+    git commit -m "chore(deps): update dev packages"
     git push origin $BRANCH_NAME
   else
     exit 0
