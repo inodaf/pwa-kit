@@ -4,7 +4,7 @@
   "description": "PWA Template with Next.js + TypeScript",
   "license": "MIT",
   "scripts": {
-    "prepare": "if [[ -z $GITHUB_ACTIONS ]]; then pnpm msw init public/ --save; else echo \"ci\"; fi;",
+    "prepare": "if [[ -z $GITHUB_ACTIONS ]]; then pnpm msw init public/ --save; else echo CI; fi;",
     "dev": "APP_ENV=development next dev",
     "build:stag": "APP_ENV=staging next build",
     "build:prod": "APP_ENV=production next build",
