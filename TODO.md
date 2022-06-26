@@ -13,13 +13,17 @@
 - [x] Code Format with Prettier
 - [x] Coverage Reports
 - [x] Mocking with MSW
-- [ ] E2E Tests with Cypress
+- [ ] E2E Tests with Cypress or Playwright
+
+## Performance
+- [ ] Bundlesize
+- [ ] Performance Budget
+- [ ] Lighthouse CI
 
 ## CI + Deployment
 
 - [x] CI with GitHub Actions
 - [ ] Deployment + Preview with Netlify
-- [ ] Lighthouse CI
 
 ## Observability and Tracking
 
