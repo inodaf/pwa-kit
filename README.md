@@ -76,7 +76,7 @@ pnpm install
 The command bellow will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
 
 ```sh
-# spawns the Application Server at http://localhost:3000
+# spawns the Dev Server at http://localhost:3000
 pnpm dev
 ```
 
