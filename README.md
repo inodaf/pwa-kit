@@ -82,7 +82,7 @@ pnpm dev
 
 **Testing**
 
-There are **Integration**, **Unit** and **E2E** tests are available and the matching test environment variables (`.env.test`) are automatically loaded. With the exception of E2E tests, these commands are also used for CI environments.
+There are **Integration**, **Unit** and **E2E** tests available and the matching test environment variables (`.env.test`) are automatically loaded. With the exception of E2E tests, these commands are also used for CI environments.
 
 ```sh
 # Unit & Integration Tests
