@@ -29,7 +29,7 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 - 🐞 Linting with [TypeScript ESLint](https://typescript-eslint.io)
 - 📝 Code Format with [Prettier](https://prettier.io)
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
-- 🌲 E2E Tests with [Cypress](https://www.cypress.io/) _soon_
+- 🌲 E2E Tests with [Playwright](https://playwright.dev/)
 
 **Security**
 
@@ -76,19 +76,25 @@ pnpm install
 The command bellow will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
 
 ```sh
-# spawns the Next.js Server at http://localhost:3000
+# spawns the Application Server at http://localhost:3000
 pnpm dev
 ```
 
 **Testing**
 
-There are multiple ways for running the tests.
+There are **Integration**, **Unit** and **E2E** tests are available and the matching test environment variables (`.env.test`) are automatically loaded. With the exception of E2E tests, these commands are also used for CI environments.
 
 ```sh
-pnpm test   # run tests without watch
-pnpm test:w # run tests with watch
-pnpm test:c # run tests with coverage
-pnpm t      # alias for `pnpm test`
+# Unit & Integration Tests
+pnpm test     # run tests without watch
+pnpm test:w   # run tests with watch
+pnpm test:c   # run tests with coverage
+pnpm t        # alias for `pnpm test`
+```
+
+```sh
+# E2E Tests
+pnpm test:e2e # runs with **dev server** as Base URL
 ```
 
 **Linting & Code Formatting**

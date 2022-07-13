@@ -1,3 +1,3 @@
-import { Greetings } from "@/modules/ui/views/components/greetings";
+import { HelloPage } from "@/modules/hello/views/pages/hello";
 
-export default Greetings;
+export default HelloPage;

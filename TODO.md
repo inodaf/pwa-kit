@@ -13,7 +13,7 @@
 - [x] Code Format with Prettier
 - [x] Coverage Reports
 - [x] Mocking with MSW
-- [ ] E2E Tests with Cypress or Playwright
+- [x] E2E Tests with Playwright
 
 ## Performance
 - [ ] Bundlesize
