@@ -113,3 +113,6 @@ public/worker-*.js
 
 # msw files
 public/mockServiceWorker.js
+
+# Next.js Type Definitions
+next-env.d.ts
