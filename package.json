@@ -4,7 +4,6 @@
   "description": "PWA Template with Next.js + TypeScript",
   "license": "MIT",
   "scripts": {
-    "prepare": "if [[ -z $CI ]]; then pnpm msw init public/ --save; else echo CI; fi;",
     "dev": "APP_ENV=development next dev",
     "build:stag": "APP_ENV=staging next build",
     "build:prod": "APP_ENV=production next build",
@@ -23,12 +22,12 @@
     "cleanup:hard": "pnpm rimraf .next coverage node_modules"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.0.10",
     "dotenv-flow": "^3.2.0",
-    "next": "^12.1.6",
+    "next": "^12.2.3",
     "next-pwa": "^5.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-query": "^3.39.1",
     "workbox-precaching": "^6.5.3",
     "workbox-routing": "^6.5.3"
   },
