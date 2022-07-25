@@ -67,9 +67,11 @@ A **Makefile** is used to orchestrate the installation of required tooling and d
 make
 ```
 
+[troubleshoot-link]: #troubleshooting
+
 > **Note**
 >
-> In case of failure, head to the **Troubleshooting** section below for alternatives[^1].
+> In case of failure, head to the [**Troubleshooting**](troubleshoot-link) section below for alternatives.
 
 **Development Server**
 
@@ -150,8 +152,7 @@ pnpm cleanup:hard # same as above but also remove `node_modules`
 
 ## Troubleshooting
 
-[^1]:
-  **Fail while using the `make` command:** Behind the scenes this command depends on `cURL` for downloading Volta and pnpm binaries. Try to install cURL and run the `make` command again. Also, the commands from Makefile are **not supported on Windows** machines so the alternative is manually installing the required dependencies.
+**Fail while using the `make` command:** Behind the scenes this command depends on `cURL` for downloading Volta and pnpm binaries. Try installing cURL then run the command again. Also, the commands from Makefile are **not supported on Windows** machines so the alternative is manually installing the required dependencies.
 
 ---
 
