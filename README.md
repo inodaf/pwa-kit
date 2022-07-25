@@ -67,11 +67,9 @@ A **Makefile** is used to orchestrate the installation of required tooling and d
 make
 ```
 
-[troubleshoot-link]: #troubleshooting
-
 > **Note**
 >
-> In case of failure, head to the [**Troubleshooting**](troubleshoot-link) section below for alternatives.
+> In case of failure, head to the [**Troubleshooting**](/#troubleshooting) section below for alternatives.
 
 **Development Server**
 
