@@ -7,6 +7,7 @@
       <img src="https://img.shields.io/badge/Testing-Jest-pink.svg" />
       <img src="https://img.shields.io/badge/Format-Prettier-coral.svg" />
       <img src="https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg" />
+      <img src="https://img.shields.io/badge/Node.js-v16.15.1-gren.svg" />
     </div>
   </div>
 </h1>
@@ -17,10 +18,10 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **Base**
 
-- ⚡️ Next.js with TypeScript + Paths
+- ⚡️ **Next.js** with TypeScript + Paths
 - 🍃 Env Vars for `Production`, `Staging` and `Development`
-- 📱 First Class PWA Support
-- 👩‍🎤 CSS Styling with [TailwindCSS](https://tailwindcss.com)
+- 📱 First Class **PWA Support**
+- 👩‍🎤 **CSS Styling** with [TailwindCSS](https://tailwindcss.com)
 - ⚛️ Support for [React Query](https://react-query.tanstack.com)
 
 **Quality**
@@ -33,8 +34,8 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **Security**
 
-- 👮‍♂️ Support for Content-Security-Policy
-- 🔍 CI Sec Inspection with [Mozilla Observatory](https://observatory.mozilla.org/) _soon_
+- 👮‍♂️ Support for **Content-Security-Policy**
+- 🔍 CI **Sec Inspection** with [Mozilla Observatory](https://observatory.mozilla.org/) _soon_
 
 **Accessibility**
 
@@ -43,9 +44,9 @@ Starting a new Web App needs to be easy. **PWA Starter** provides a fully featur
 
 **CI + Deployment**
 
-- 📍 GitHub Actions for Test, Lint and Format
+- 📍 **GitHub Actions** for Test, Lint and Format
 - 🚀 Deployment + Preview with Netlify _soon_
-- 🚥 Lighthouse CI for each Pull Request _soon_
+- 🚥 Lighthouse CI + Bundlesize _soon_
 
 ---
 
@@ -60,16 +61,15 @@ Base commands for develop, test and build.
 
 **Prepare Development**
 
-```sh
-# install the Node.js version specified at package.json.
-# we will always opt for the active LTS version.
-volta fetch node
-```
+A **Makefile** is used to orchestrate the installation of required tooling and dependencies. Open your Terminal app and run the command bellow, then you are able to get started.
 
 ```sh
-# install project dependencies
-pnpm install
+make
 ```
+
+> **Note**
+>
+> In case this command fails, head to the **Troubleshooting** section for alternatives [^1].
 
 **Development Server**
 
@@ -145,6 +145,13 @@ Whenever you need a fresh start in case something is going wrong, you can levera
 pnpm cleanup # remove caches and temp files
 pnpm cleanup:hard # same as above but also remove `node_modules`
 ```
+
+---
+
+## Troubleshooting
+
+[^1]:
+  **Could not use the `make` command:** Behind the scenes this command depends on `cURL` for downloading the Volta and pnpm binaries. You can try installing cURL and try again. Also, the commands from Makefile are **not supported on Windows** machines.
 
 ---
 
