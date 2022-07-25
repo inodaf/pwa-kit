@@ -69,7 +69,7 @@ make
 
 > **Note**
 >
-> In case of failure, head to the [**Troubleshooting**](/#troubleshooting) section below for alternatives.
+> In case of failure, head to the [**Troubleshooting**](#troubleshooting) section below for alternatives.
 
 **Development Server**
 
