@@ -69,11 +69,11 @@ make
 
 > **Note**
 >
-> In case this command fails, head to the **Troubleshooting** section for alternatives [^1].
+> In case of failure, head to the **Troubleshooting** section below for alternatives[^1].
 
 **Development Server**
 
-The command bellow will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
+The next command will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
 
 ```sh
 # spawns the Dev Server at http://localhost:3000
@@ -151,7 +151,7 @@ pnpm cleanup:hard # same as above but also remove `node_modules`
 ## Troubleshooting
 
 [^1]:
-  **Could not use the `make` command:** Behind the scenes this command depends on `cURL` for downloading the Volta and pnpm binaries. You can try installing cURL and try again. Also, the commands from Makefile are **not supported on Windows** machines.
+  **Fail while using the `make` command:** Behind the scenes this command depends on `cURL` for downloading Volta and pnpm binaries. Try to install cURL and run the `make` command again. Also, the commands from Makefile are **not supported on Windows** machines so the alternative is manually installing the required dependencies.
 
 ---
 
