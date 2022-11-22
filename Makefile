@@ -6,7 +6,7 @@ node_modules: package.json pnpm-lock.yaml
 	@echo '📚 Installing pnpm...'
 	@[ -z "$(which pnpm)" ] || curl -fsSL https://get.pnpm.io/install.sh | sh -
 	@echo '🧱 Setting up project...'
-	@volta fetch node
+	@volta fetch node@16.15.1
 	@pnpm install
 
 public/mockServiceWorker.js:

@@ -16,10 +16,11 @@
     "jsx": "preserve",
     "paths": {
       "@/*": ["src/*"],
-      "@config/*": ["config/*"]
+      "@/types/*": ["./.types/*"],
+      "@/tests/*": ["./tests/*"]
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".types/global.d.ts"],
-  "exclude": ["node_modules", "config/mocks/**/*.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".types/**.ts"],
+  "exclude": ["node_modules", "tests/config/mocks/**/*.ts"]
 }

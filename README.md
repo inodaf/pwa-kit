@@ -1,7 +1,7 @@
 <h1>
   <img src="./.github/projecticon.svg" width="96" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
   <div>
-    PWA Starter · Enterprise Applications
+    PWA Kit · Enterprise Apps
     <div>
       <img src="https://img.shields.io/badge/TypeScript-Next.js%20-white.svg" />
       <img src="https://img.shields.io/badge/Testing-Jest-pink.svg" />
@@ -12,16 +12,16 @@
   </div>
 </h1>
 
-Starting a new Web App needs to be easy. **PWA Starter** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on code delivery without compromising best practices.
+Starting a new Web App needs to be easy. **PWA Kit** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on code delivery without compromising best practices.
 
 ## The Stack
 
 **Base**
 
 - ⚡️ **Next.js** with TypeScript + Paths
-- 🍃 Env Vars for `Production`, `Staging` and `Development`
 - 📱 First Class **PWA Support**
-- 👩‍🎤 **CSS Styling** with [TailwindCSS](https://tailwindcss.com)
+- 🍃 Application Properties for `Production`, `Staging` and `Development`
+- 👩‍🎤 **CSS Styling** with [TailwindCSS](https://tailwindcss.com) or CSS Modules
 - ⚛️ Support for [React Query](https://react-query.tanstack.com)
 
 **Quality**
@@ -73,11 +73,10 @@ make
 
 **Development Server**
 
-The next command will spawn the Dev Server and load the Env Vars from `.env`, `.env.development` and `.env.local`.
+The next command will spawn the Dev Server and load the environment variables from `.env`.
 
 ```sh
-# spawns the Dev Server at http://localhost:3000
-pnpm dev
+pnpm dev # spawns the Dev Server at http://localhost:3000
 ```
 
 **Testing**
@@ -115,26 +114,43 @@ pnpm fmt       # checks formatting and fixes issues
 
 ---
 
+## Environment Variables
+
+Sensitive and secret data can be defined using Environment Variables. An `.env` file at the root directory can be used for storing these data. As per security `.env` files cannot be tracked through version control systems.
+
+## Application Properties
+
+Also known as _Configuration_, application properties let you define environment-specific, static configuration for your system. Unlike Environment Variables, Properties cannot include sensitive values.
+
+There are the `base`, `dev`, `production` and `staging` properties but it's possible to add many others, as they are named based on the value of `APP_ENV` and `NEXT_PUBLIC_APP_ENV` environment variable. Also they are separated by `client` and `server`.
+
+The properties from `base` holds all the default configuration that applies for all environments. Overriding these values is made possible by using the environment specific property file, like `dev`.
+
+In short, when `APP_ENV` and `NEXT_PUBLIC_APP_ENV` is set to `production`, `base` and `production` property files will be loaded and merged. Then they can be accessed through the application as bellow:
+
+```ts
+import { properties as serverProperties } from "@/config/properties/server";
+import { properties as clientProperties } from "@/config/properties/client";
+```
+
+---
+
 ## Building
 
 Builds are separated by environments: Production and Staging. For both environments the `NODE_ENV` is set to `production`.
 
 **Production**
 
-Refer to `./config/envs/.env.production` for the environment variables.
-
 ```sh
-pnpm build:prod # builds with production bindings
-pnpm start:prod # starts the built app with production bindings
+pnpm build:prod # build with production bindings
+pnpm start:prod # start the built app with production bindings
 ```
 
 **Staging**
 
-Refer to `./config/envs/.env.staging` for the environment variables.
-
 ```sh
-pnpm build:stag # builds with staging bindings
-pnpm start:stag # starts the built app with staging bindings
+pnpm build:stag # build with staging bindings
+pnpm start:stag # start the built app with staging bindings
 ```
 
 ## Cleanup
@@ -142,7 +158,7 @@ pnpm start:stag # starts the built app with staging bindings
 Whenever you need a fresh start in case something is going wrong, you can leverage handy cleanup commands.
 
 ```sh
-pnpm cleanup # remove caches and temp files
+pnpm cleanup      # remove caches and temp files
 pnpm cleanup:hard # same as above but also remove `node_modules`
 ```
 
@@ -156,4 +172,4 @@ pnpm cleanup:hard # same as above but also remove `node_modules`
 
 ## License
 
-Altough this **template** itself is MIT licensed, if needed, you must change the license after creating your project.
+Although this **template** is MIT licensed, if needed, you must change the license after creating your project.

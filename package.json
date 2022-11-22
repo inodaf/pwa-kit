@@ -1,29 +1,30 @@
 {
-  "name": "pwa-starter",
+  "name": "pwa-kit",
   "version": "0.0.0",
-  "description": "PWA Template with Next.js + TypeScript",
+  "description": "PWA Kit with Next.js + TypeScript",
   "license": "MIT",
   "scripts": {
-    "dev": "APP_ENV=development next dev",
-    "build:stag": "APP_ENV=staging next build",
-    "build:prod": "APP_ENV=production next build",
-    "start:stag": "APP_ENV=staging next start",
-    "start:prod": "APP_ENV=production next start",
+    "dev": "APP_ENV=dev NEXT_PUBLIC_APP_ENV=dev next dev",
+    "build:stag": "APP_ENV=staging NEXT_PUBLIC_APP_ENV=staging next build",
+    "build:prod": "APP_ENV=production NEXT_PUBLIC_APP_ENV=production next build",
+    "start:stag": "APP_ENV=staging NEXT_PUBLIC_APP_ENV=staging next start",
+    "start:prod": "APP_ENV=production NEXT_PUBLIC_APP_ENV=production next start",
     "lint": "eslint . --ext .ts,.tsx --fix",
-    "fmt": "prettier --write '(src|tests)/**/*.{ts,tsx,json}'",
+    "fmt": "prettier --write '(src|tests|.types)/**/*.{ts,tsx,json}'",
     "lint:check": "eslint . --ext .ts,.tsx",
-    "fmt:check": "prettier --check '(src|tests)/**/*.{ts,tsx,json}'",
-    "test": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i",
-    "test:w": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i --watch",
-    "test:c": "DOTENV_FLOW_PATH=config/envs APP_ENV=development jest -i --coverage",
+    "fmt:check": "prettier --check '(src|tests|.types)/**/*.{ts,tsx,json}'",
+    "test": "APP_ENV=dev NEXT_PUBLIC_APP_ENV=dev jest -i",
+    "test:w": "pnpm test -- --watch",
+    "test:c": "pnpm test -- --coverage",
     "t": "pnpm test",
-    "test:e2e": "E2E_BASE_URL=http://localhost:3000 pnpm playwright test -x -c config/e2e/setup.ts",
+    "test:e2e": "E2E_BASE_URL=http://localhost:3000 pnpm playwright test -x -c tests/config/e2e/setup.ts",
     "cleanup": "pnpm rimraf .next coverage",
-    "cleanup:hard": "pnpm rimraf .next coverage node_modules"
+    "cleanup:hard": "pnpm cleanup -- node_modules"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.0.10",
-    "dotenv-flow": "^3.2.0",
+    "dotenv": "16.0.3",
+    "lodash.merge": "4.6.2",
     "next": "^12.2.3",
     "next-pwa": "^5.5.4",
     "react": "^18.2.0",
@@ -39,8 +40,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^8.0.1",
-    "@types/dotenv-flow": "^3.2.0",
     "@types/jest": "^29.1.1",
+    "@types/lodash.merge": "4.6.7",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -87,16 +88,15 @@
     ],
     "testEnvironment": "jsdom",
     "setupFiles": [
-      "dotenv-flow/config"
+      "dotenv/config"
     ],
     "setupFilesAfterEnv": [
       "@testing-library/react/dont-cleanup-after-each",
       "@testing-library/jest-dom/extend-expect",
-      "./config/mocks/setup-tests.ts"
+      "./tests/config/mocks/setup-tests.ts"
     ],
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1",
-      "^@config/(.*)$": "<rootDir>/config/$1"
+      "^@/(.*)$": "<rootDir>/src/$1"
     },
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",

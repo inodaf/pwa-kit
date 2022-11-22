@@ -3,11 +3,11 @@ import type { AppProps } from "next/app";
 import React from "react";
 import Head from "next/head";
 
-import { ReactQueryProvider } from "@/configurations/providers/react-query";
+import { AppProviders } from "@/configurations/providers";
 import "@/configurations/workers/mocks";
 import "@/configurations/styles/globals.css";
 
-function App({ Component, pageProps }: AppProps): JSX.Element {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="My WebApp bootstraped from inodaf/pwa-starter"
+          content="My WebApp bootstrapped from inodaf/pwa-starter"
         />
         <link
           rel="apple-touch-icon"
@@ -33,9 +33,9 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <ReactQueryProvider>
+      <AppProviders>
         <Component {...pageProps} />
-      </ReactQueryProvider>
+      </AppProviders>
     </>
   );
 }

@@ -21,6 +21,7 @@ setup() {
 
 work() {
   # TODO: Remove the --latest option when not in template.
+  pnpm up --prod --latest
   pnpm up --dev --latest
 }
 

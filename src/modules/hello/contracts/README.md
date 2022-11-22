@@ -1,15 +1,15 @@
 ## `module/contracts`
 
-Directory intended for storing type definitions for the external services you use.
+Directory intended for storing type definitions for the external services the application rely on.
 
 ```ts
-// @ modules/user/contracts/SignupResponse.ts
-export type SignupResponse = {
+// @ modules/user/contracts/SignUpResponse.ts
+export type SignUpResponse = {
   token: string;
 };
 
-// @ modules/user/contracts/SignupRequest.ts
-export type SignupRequest = {
+// @ modules/user/contracts/SignUpRequest.ts
+export type SignUpRequest = {
   email: string;
   password: string;
 };

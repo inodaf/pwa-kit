@@ -9,8 +9,8 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
   '@testing-library/react-hooks': ^8.0.1
-  '@types/dotenv-flow': ^3.2.0
   '@types/jest': ^29.1.1
+  '@types/lodash.merge': 4.6.7
   '@types/node': ^18.7.23
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
@@ -20,7 +20,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.38.1
   autoprefixer: ^10.4.12
   babel-loader: ^8.2.5
-  dotenv-flow: ^3.2.0
+  dotenv: 16.0.3
   eslint: ^8.24.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-jsx-a11y: ^6.6.1
@@ -28,6 +28,7 @@ specifiers:
   eslint-plugin-react-hooks: ^4.6.0
   jest: ^29.1.2
   jest-environment-jsdom: ^29.1.2
+  lodash.merge: 4.6.2
   msw: ^0.47.3
   next: ^12.2.3
   next-pwa: ^5.5.4
@@ -45,7 +46,8 @@ specifiers:
 
 dependencies:
   '@tanstack/react-query': 4.0.10_biqbaboplfbrettd7655fr4n2y
-  dotenv-flow: 3.2.0
+  dotenv: 16.0.3
+  lodash.merge: 4.6.2
   next: 12.2.3_6tziyx3dehkoeijunclpkpolha
   next-pwa: 5.5.4_3ppte2k2mzya4sujelak2g72mu
   react: 18.2.0
@@ -61,8 +63,8 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/react-hooks': 8.0.1_rj7ozvcq3uehdlnj3cbwzbi5ce
-  '@types/dotenv-flow': 3.2.0
   '@types/jest': 29.1.1
+  '@types/lodash.merge': 4.6.7
   '@types/node': 18.7.23
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -1649,7 +1651,7 @@ packages:
     dev: false
 
   /@next/swc-android-arm-eabi/12.2.3:
-    resolution: {integrity: sha512-JxmCW9XB5PYnkGE67BdnBTdqW0SW6oMCiPMHLdjeRi4T3U4JJKJGnjQld99+6TPOfPWigtw3W7Cijp5gc+vJ/w==}
+    resolution: {integrity: sha512-JxmCW9XB5PYnkGE67BdnBTdqW0SW6oMCiPMHLdjeRi4T3U4JJKJGnjQld99+6TPOfPWigtw3W7Cijp5gc+vJ/w==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [android]
@@ -1658,7 +1660,7 @@ packages:
     optional: true
 
   /@next/swc-android-arm64/12.2.3:
-    resolution: {integrity: sha512-3l4zXpWnzy0fqoedsFRxzMy/eGlMMqn6IwPEuBmtEQ4h7srmQFHyT+Bk+eVHb0o1RQ7/TloAa+mu8JX5tz/5tA==}
+    resolution: {integrity: sha512-3l4zXpWnzy0fqoedsFRxzMy/eGlMMqn6IwPEuBmtEQ4h7srmQFHyT+Bk+eVHb0o1RQ7/TloAa+mu8JX5tz/5tA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-android-arm64/-/swc-android-arm64-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
@@ -1667,7 +1669,7 @@ packages:
     optional: true
 
   /@next/swc-darwin-arm64/12.2.3:
-    resolution: {integrity: sha512-eutDO/RH6pf7+8zHo3i2GKLhF0qaMtxWpY8k3Oa1k+CyrcJ0IxwkfH/x3f75jTMeCrThn6Uu8j3WeZOxvhto1Q==}
+    resolution: {integrity: sha512-eutDO/RH6pf7+8zHo3i2GKLhF0qaMtxWpY8k3Oa1k+CyrcJ0IxwkfH/x3f75jTMeCrThn6Uu8j3WeZOxvhto1Q==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -1676,7 +1678,7 @@ packages:
     optional: true
 
   /@next/swc-darwin-x64/12.2.3:
-    resolution: {integrity: sha512-lve+lnTiddXbcT3Lh2ujOFywQSEycTYQhuf6j6JrPu9oLQGS01kjIqqSj3/KMmSoppEnXo3BxkgYu+g2+ecHkA==}
+    resolution: {integrity: sha512-lve+lnTiddXbcT3Lh2ujOFywQSEycTYQhuf6j6JrPu9oLQGS01kjIqqSj3/KMmSoppEnXo3BxkgYu+g2+ecHkA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-darwin-x64/-/swc-darwin-x64-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -1685,7 +1687,7 @@ packages:
     optional: true
 
   /@next/swc-freebsd-x64/12.2.3:
-    resolution: {integrity: sha512-V4bZU1qBFkULTPW53phY8ypioh3EERzHu9YKAasm9RxU4dj+8c/4s60y+kbFkFEEpIUgEU6yNuYZRR4lHHbUGA==}
+    resolution: {integrity: sha512-V4bZU1qBFkULTPW53phY8ypioh3EERzHu9YKAasm9RxU4dj+8c/4s60y+kbFkFEEpIUgEU6yNuYZRR4lHHbUGA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-freebsd-x64/-/swc-freebsd-x64-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -1694,7 +1696,7 @@ packages:
     optional: true
 
   /@next/swc-linux-arm-gnueabihf/12.2.3:
-    resolution: {integrity: sha512-MWxS/i+XSEKdQE0ZmdYkPPrWKBi4JwMVaXdOW9J/T/sZJsHsLlSC9ErBcNolKAJEVka+tnw9oPRyRCKOj+q0sw==}
+    resolution: {integrity: sha512-MWxS/i+XSEKdQE0ZmdYkPPrWKBi4JwMVaXdOW9J/T/sZJsHsLlSC9ErBcNolKAJEVka+tnw9oPRyRCKOj+q0sw==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-linux-arm-gnueabihf/-/swc-linux-arm-gnueabihf-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -1703,43 +1705,47 @@ packages:
     optional: true
 
   /@next/swc-linux-arm64-gnu/12.2.3:
-    resolution: {integrity: sha512-ikXkqAmvEcWTzIQFDdmrUHLWzdDAF5s2pVsSpQn9rk/gK1i9webH1GRQd2bSM7JLuPBZSaYrNGvDTyHZdSEYlg==}
+    resolution: {integrity: sha512-ikXkqAmvEcWTzIQFDdmrUHLWzdDAF5s2pVsSpQn9rk/gK1i9webH1GRQd2bSM7JLuPBZSaYrNGvDTyHZdSEYlg==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
 
   /@next/swc-linux-arm64-musl/12.2.3:
-    resolution: {integrity: sha512-wE45gGFkeLLLnCoveKaBrdpYkkypl3qwNF2YhnfvfVK7etuu1O679LwClhCWinDVBr+KOkmyHok00Z+0uI1ycg==}
+    resolution: {integrity: sha512-wE45gGFkeLLLnCoveKaBrdpYkkypl3qwNF2YhnfvfVK7etuu1O679LwClhCWinDVBr+KOkmyHok00Z+0uI1ycg==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
 
   /@next/swc-linux-x64-gnu/12.2.3:
-    resolution: {integrity: sha512-MbFI6413VSXiREzHwYD8YAJLTknBaC+bmjXgdHEEdloeOuBFQGE3NWn3izOCTy8kV+s98VDQO8au7EKKs+bW0g==}
+    resolution: {integrity: sha512-MbFI6413VSXiREzHwYD8YAJLTknBaC+bmjXgdHEEdloeOuBFQGE3NWn3izOCTy8kV+s98VDQO8au7EKKs+bW0g==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
 
   /@next/swc-linux-x64-musl/12.2.3:
-    resolution: {integrity: sha512-jMBD0Va6fInbPih/dNySlNY2RpjkK6MXS+UGVEvuTswl1MZr+iahvurmshwGKpjaRwVU4DSFMD8+gfWxsTFs1Q==}
+    resolution: {integrity: sha512-jMBD0Va6fInbPih/dNySlNY2RpjkK6MXS+UGVEvuTswl1MZr+iahvurmshwGKpjaRwVU4DSFMD8+gfWxsTFs1Q==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
 
   /@next/swc-win32-arm64-msvc/12.2.3:
-    resolution: {integrity: sha512-Cq8ToPdc0jQP2C7pjChYctAsEe7+lO/B826ZCK5xFzobuHPiCyJ2Mzx/nEQwCY4SpYkeJQtCbwlCz5iyGW5zGg==}
+    resolution: {integrity: sha512-Cq8ToPdc0jQP2C7pjChYctAsEe7+lO/B826ZCK5xFzobuHPiCyJ2Mzx/nEQwCY4SpYkeJQtCbwlCz5iyGW5zGg==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -1748,7 +1754,7 @@ packages:
     optional: true
 
   /@next/swc-win32-ia32-msvc/12.2.3:
-    resolution: {integrity: sha512-BtFq4c8IpeB0sDhJMHJFgm86rPkOvmYI8k3De8Y2kgNVWSeLQ0Q929PWf7e+GqcX1015ei/gEB41ZH8Iw49NzA==}
+    resolution: {integrity: sha512-BtFq4c8IpeB0sDhJMHJFgm86rPkOvmYI8k3De8Y2kgNVWSeLQ0Q929PWf7e+GqcX1015ei/gEB41ZH8Iw49NzA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -1757,7 +1763,7 @@ packages:
     optional: true
 
   /@next/swc-win32-x64-msvc/12.2.3:
-    resolution: {integrity: sha512-huSNb98KSG77Kl96CoPgCwom28aamuUsPpRmn/4s9L0RNbbHVSkp9E6HA4yOAykZCEuWcdNsRLbVVuAbt8rtIw==}
+    resolution: {integrity: sha512-huSNb98KSG77Kl96CoPgCwom28aamuUsPpRmn/4s9L0RNbbHVSkp9E6HA4yOAykZCEuWcdNsRLbVVuAbt8rtIw==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.2.3.tgz}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -1876,7 +1882,7 @@ packages:
     dev: false
 
   /@swc/core-android-arm-eabi/1.3.4:
-    resolution: {integrity: sha512-aq+CAebSQMtdrIR4+v/JBfykK/daD+so2gPHm4wgLaTR+xwziQAsBBI5iq5sinhIg4FGnmljtO75QolcNLmpvw==}
+    resolution: {integrity: sha512-aq+CAebSQMtdrIR4+v/JBfykK/daD+so2gPHm4wgLaTR+xwziQAsBBI5iq5sinhIg4FGnmljtO75QolcNLmpvw==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-android-arm-eabi/-/core-android-arm-eabi-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [android]
@@ -1886,7 +1892,7 @@ packages:
     optional: true
 
   /@swc/core-android-arm64/1.3.4:
-    resolution: {integrity: sha512-E5z6ribiEzDqrq5Kv5xOLdWcTzHWlzGuqDSxTQNz9GCC94qSVzXp5Df+egVEKE/4t7u2P6nO46BUKweYMb9TJg==}
+    resolution: {integrity: sha512-E5z6ribiEzDqrq5Kv5xOLdWcTzHWlzGuqDSxTQNz9GCC94qSVzXp5Df+egVEKE/4t7u2P6nO46BUKweYMb9TJg==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-android-arm64/-/core-android-arm64-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [android]
@@ -1896,7 +1902,7 @@ packages:
     optional: true
 
   /@swc/core-darwin-arm64/1.3.4:
-    resolution: {integrity: sha512-JNBFQKtaUdsq0Sv6N29++Q6xrvZDn1bQ7pbMvr8t7kBNXaYCDmupbwPGT725MrGVs72N4qKee5Z0OIvmnLCQfw==}
+    resolution: {integrity: sha512-JNBFQKtaUdsq0Sv6N29++Q6xrvZDn1bQ7pbMvr8t7kBNXaYCDmupbwPGT725MrGVs72N4qKee5Z0OIvmnLCQfw==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -1904,7 +1910,7 @@ packages:
     optional: true
 
   /@swc/core-darwin-x64/1.3.4:
-    resolution: {integrity: sha512-A6KMZsUJ3j5TVxAizbv+UEjCNvMgWBm9jw4R3biaw8kbgu3XUWHdkiheXO+c2kjjjgwr1jhkHcLgRjffwpLYFA==}
+    resolution: {integrity: sha512-A6KMZsUJ3j5TVxAizbv+UEjCNvMgWBm9jw4R3biaw8kbgu3XUWHdkiheXO+c2kjjjgwr1jhkHcLgRjffwpLYFA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-darwin-x64/-/core-darwin-x64-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -1912,7 +1918,7 @@ packages:
     optional: true
 
   /@swc/core-freebsd-x64/1.3.4:
-    resolution: {integrity: sha512-C5FCXHebcHwPJtEhgRShumXvcdPO5Cqiwd7GDNBav1IZribs3+ZqrTkCaz2hY7gb5NvyFIxkJ5HhpS4Pxafhuw==}
+    resolution: {integrity: sha512-C5FCXHebcHwPJtEhgRShumXvcdPO5Cqiwd7GDNBav1IZribs3+ZqrTkCaz2hY7gb5NvyFIxkJ5HhpS4Pxafhuw==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-freebsd-x64/-/core-freebsd-x64-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [freebsd]
@@ -1922,7 +1928,7 @@ packages:
     optional: true
 
   /@swc/core-linux-arm-gnueabihf/1.3.4:
-    resolution: {integrity: sha512-vawHUhUcS//xNvGzL0zZ3vZ1YnsjgyvWQXB5PF4bhM5Y0/rmcrEdpkSId1qTfaMpcL7l2QSy9/DM7ucjlSpK6w==}
+    resolution: {integrity: sha512-vawHUhUcS//xNvGzL0zZ3vZ1YnsjgyvWQXB5PF4bhM5Y0/rmcrEdpkSId1qTfaMpcL7l2QSy9/DM7ucjlSpK6w==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
@@ -1932,39 +1938,43 @@ packages:
     optional: true
 
   /@swc/core-linux-arm64-gnu/1.3.4:
-    resolution: {integrity: sha512-p60RoYaDS8zrqp/cGkcJryk9HobJvrL+Ox/iz8ivDrV4IS0LXvqW5/5YTSzLo93/+blvG/M0hdaokoMhWhDnwA==}
+    resolution: {integrity: sha512-p60RoYaDS8zrqp/cGkcJryk9HobJvrL+Ox/iz8ivDrV4IS0LXvqW5/5YTSzLo93/+blvG/M0hdaokoMhWhDnwA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     optional: true
 
   /@swc/core-linux-arm64-musl/1.3.4:
-    resolution: {integrity: sha512-F9hW6g5l4YesJJH/JMznaLGdLeCV4FKq5MN5DaZfuB8qrCZGLmAasGgvSNbXh1oZnDu1PD2ZxMYivkf2n8/4OA==}
+    resolution: {integrity: sha512-F9hW6g5l4YesJJH/JMznaLGdLeCV4FKq5MN5DaZfuB8qrCZGLmAasGgvSNbXh1oZnDu1PD2ZxMYivkf2n8/4OA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     optional: true
 
   /@swc/core-linux-x64-gnu/1.3.4:
-    resolution: {integrity: sha512-rRqDtxktiVaxO8NQeEZSX0kNSFkI5Ft+4fZcFTbWhDO0vknC0+ZYbWpverfQ8yAwo7aA9jKWupwc3I7iZ1EQQQ==}
+    resolution: {integrity: sha512-rRqDtxktiVaxO8NQeEZSX0kNSFkI5Ft+4fZcFTbWhDO0vknC0+ZYbWpverfQ8yAwo7aA9jKWupwc3I7iZ1EQQQ==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     optional: true
 
   /@swc/core-linux-x64-musl/1.3.4:
-    resolution: {integrity: sha512-stVnU7KXQxSbh67UiIVxZsgjkRSXApPTEU3CYnwsdH7G+ynfO1WocSatzjIKpJfhcY2Nss8/33yDaOKZXVhbIA==}
+    resolution: {integrity: sha512-stVnU7KXQxSbh67UiIVxZsgjkRSXApPTEU3CYnwsdH7G+ynfO1WocSatzjIKpJfhcY2Nss8/33yDaOKZXVhbIA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     optional: true
 
   /@swc/core-win32-arm64-msvc/1.3.4:
-    resolution: {integrity: sha512-qc3UIdAQfLTA1mJsFkX3ISqJDU02qtcjUbnLI8sl6oedCAOFF66TcecJvwl4iO+BTO04+KoZc5rJovSTOb3eQA==}
+    resolution: {integrity: sha512-qc3UIdAQfLTA1mJsFkX3ISqJDU02qtcjUbnLI8sl6oedCAOFF66TcecJvwl4iO+BTO04+KoZc5rJovSTOb3eQA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -1974,7 +1984,7 @@ packages:
     optional: true
 
   /@swc/core-win32-ia32-msvc/1.3.4:
-    resolution: {integrity: sha512-FxuDGn60VrnYBcpH0CeR9+pCnPUaVvZ20CO6o/oNYHSfIhqPc76o3zFYYEFswYodExjCCYwsuPYgi+stvKZroA==}
+    resolution: {integrity: sha512-FxuDGn60VrnYBcpH0CeR9+pCnPUaVvZ20CO6o/oNYHSfIhqPc76o3zFYYEFswYodExjCCYwsuPYgi+stvKZroA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-win32-ia32-msvc/-/core-win32-ia32-msvc-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
@@ -1984,7 +1994,7 @@ packages:
     optional: true
 
   /@swc/core-win32-x64-msvc/1.3.4:
-    resolution: {integrity: sha512-9/bSvgjV31u1G2slRFPgK85ohJdo8KtWJ0f4CPp2LdVtIJHbFGd0pWjnMfiPJeodSxSGGWrgUNQtajqIIsrbqA==}
+    resolution: {integrity: sha512-9/bSvgjV31u1G2slRFPgK85ohJdo8KtWJ0f4CPp2LdVtIJHbFGd0pWjnMfiPJeodSxSGGWrgUNQtajqIIsrbqA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.3.4.tgz}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
@@ -2029,12 +2039,12 @@ packages:
     dev: true
 
   /@swc/wasm/1.2.122:
-    resolution: {integrity: sha512-sM1VCWQxmNhFtdxME+8UXNyPNhxNu7zdb6ikWpz0YKAQQFRGT5ThZgJrubEpah335SUToNg8pkdDF7ibVCjxbQ==}
+    resolution: {integrity: sha512-sM1VCWQxmNhFtdxME+8UXNyPNhxNu7zdb6ikWpz0YKAQQFRGT5ThZgJrubEpah335SUToNg8pkdDF7ibVCjxbQ==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/wasm/-/wasm-1.2.122.tgz}
     requiresBuild: true
     optional: true
 
   /@swc/wasm/1.2.130:
-    resolution: {integrity: sha512-rNcJsBxS70+pv8YUWwf5fRlWX6JoY/HJc25HD/F8m6Kv7XhJdqPPMhyX6TKkUBPAG7TWlZYoxa+rHAjPy4Cj3Q==}
+    resolution: {integrity: sha512-rNcJsBxS70+pv8YUWwf5fRlWX6JoY/HJc25HD/F8m6Kv7XhJdqPPMhyX6TKkUBPAG7TWlZYoxa+rHAjPy4Cj3Q==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@swc/wasm/-/wasm-1.2.130.tgz}
     requiresBuild: true
     optional: true
 
@@ -2191,10 +2201,6 @@ packages:
       '@types/ms': 0.7.31
     dev: true
 
-  /@types/dotenv-flow/3.2.0:
-    resolution: {integrity: sha512-A79hbPwocbYkcTwGcDOFbKDuqyVo5mLAz/6Iq465YZ7R7Go5bT1PIM8I2jlPQkaD9u9fbotGVLkUPhX+9XUHfw==}
-    dev: true
-
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
@@ -2264,6 +2270,16 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+
+  /@types/lodash.merge/4.6.7:
+    resolution: {integrity: sha512-OwxUJ9E50gw3LnAefSHJPHaBLGEKmQBQ7CZe/xflHkyy/wH2zVyEIAKReHvVrrn7zKdF58p16We9kMfh7v0RRQ==}
+    dependencies:
+      '@types/lodash': 4.14.186
+    dev: true
+
+  /@types/lodash/4.14.186:
+    resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
+    dev: true
 
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -2595,7 +2611,7 @@ packages:
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
   /@zxing/text-encoding/0.9.0:
-    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
+    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/@zxing/text-encoding/-/text-encoding-0.9.0.tgz}
     requiresBuild: true
     dev: true
     optional: true
@@ -3439,16 +3455,9 @@ packages:
       webidl-conversions: 7.0.0
     dev: true
 
-  /dotenv-flow/3.2.0:
-    resolution: {integrity: sha512-GEB6RrR4AbqDJvNSFrYHqZ33IKKbzkvLYiD5eo4+9aFXr4Y4G+QaFrB/fNp0y6McWBmvaPn3ZNjIufnj8irCtg==}
-    engines: {node: '>= 8.0.0'}
-    dependencies:
-      dotenv: 8.6.0
-    dev: false
-
-  /dotenv/8.6.0:
-    resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
-    engines: {node: '>=10'}
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /ejs/3.1.8:
@@ -3933,7 +3942,7 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
   /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: https://artifactory.cd-tech26.de:443/artifactory/api/npm/npm/fsevents/-/fsevents-2.3.2.tgz}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -5117,7 +5126,6 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
