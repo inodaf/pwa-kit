@@ -1,6 +1,12 @@
 /* eslint-disable no-undef, @typescript-eslint/no-var-requires */
-const withPWA = require("next-pwa");
 const csp = require("./src/configurations/security/csp");
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  mode: "production",
+  disable: process.env.NODE_ENV !== "production",
+  customWorkerDir: "src/configurations/workers",
+});
 
 /** @type {import('next').NextConfig} */
 const config = {
@@ -19,13 +25,4 @@ const config = {
   ],
 };
 
-module.exports = withPWA({
-  ...config,
-  pwa: {
-    dest: "public",
-    register: true,
-    mode: "production",
-    disable: process.env.NODE_ENV !== "production",
-    customWorkerDir: "src/configurations/workers",
-  },
-});
+module.exports = withPWA(config);
