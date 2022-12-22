@@ -4,6 +4,8 @@ import React from "react";
 import Head from "next/head";
 
 import { AppProviders } from "@/configurations/providers";
+import { collectWebVitals } from "@/configurations/logging/web-vitals";
+
 import "@/configurations/workers/mocks";
 import "@/configurations/styles/globals.css";
 
@@ -40,4 +42,5 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
+export const reportWebVitals = collectWebVitals;
 export default App;
