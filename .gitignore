@@ -115,3 +115,9 @@ public/mockServiceWorker.js
 
 # Next.js Type Definitions
 next-env.d.ts
+
+# Caddyfile
+[C-c]addyfile
+
+# Miscs
+.npmrc

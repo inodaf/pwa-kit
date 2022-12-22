@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "APP_ENV=dev NEXT_PUBLIC_APP_ENV=dev next dev",
+    "dev:secure": "concurrently \"pnpm dev --port=3001\" \"caddy run\" ",
     "build:stag": "APP_ENV=staging NEXT_PUBLIC_APP_ENV=staging next build",
     "build:prod": "APP_ENV=production NEXT_PUBLIC_APP_ENV=production next build",
     "start:stag": "APP_ENV=staging NEXT_PUBLIC_APP_ENV=staging next start",
@@ -51,8 +52,10 @@
     "@typescript-eslint/parser": "^5.45.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
+    "concurrently": "7.6.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest-dom": "4.0.3",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -76,6 +79,7 @@
         }
       ]
     },
+    "reporters": ["default", "github-actions"],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -84,7 +88,8 @@
       "json"
     ],
     "testMatch": [
-      "<rootDir>/tests/(unit|integration)/**/*.test.ts(x)?"
+      "<rootDir>/tests/(unit|integration)/**/*.test.ts(x)?",
+      "<rootDir>/src/**/*.test.ts(x)?"
     ],
     "testEnvironment": "jsdom",
     "setupFiles": [
@@ -110,7 +115,8 @@
     "plugins": [
       "@typescript-eslint",
       "react-hooks",
-      "jsx-a11y"
+      "jsx-a11y",
+      "jest-dom"
     ],
     "extends": [
       "eslint:recommended",
@@ -118,6 +124,7 @@
       "plugin:react/recommended",
       "plugin:react-hooks/recommended",
       "plugin:jsx-a11y/recommended",
+      "plugin:jest-dom/recommended",
       "prettier"
     ],
     "settings": {

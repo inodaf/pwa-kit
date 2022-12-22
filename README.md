@@ -23,6 +23,7 @@ Starting a new Web App needs to be easy. **PWA Kit** provides a fully featured e
 - 🍃 Application Properties for `Production`, `Staging` and `Development`
 - 👩‍🎤 **CSS Styling** with [TailwindCSS](https://tailwindcss.com) or CSS Modules
 - ⚛️ Support for [React Query](https://react-query.tanstack.com)
+- 🔒 Automatic local **HTTPS** with [Caddy](https://caddyserver.com)
 
 **Quality**
 
@@ -42,11 +43,15 @@ Starting a new Web App needs to be easy. **PWA Kit** provides a fully featured e
 - 🧏‍♀️ Linting JSX _a11y_ with [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 - 🪓 Testing with [Axe Core](https://github.com/dequelabs/axe-core) _soon_
 
+**Performance**
+
+- 📊 Core Web Vitals Report
+- 🚥 Lighthouse CI + Bundlesize _soon_
+
 **CI + Deployment**
 
 - 📍 **GitHub Actions** for Test, Lint and Format
-- 🚀 Deployment + Preview with Netlify _soon_
-- 🚥 Lighthouse CI + Bundlesize _soon_
+- 🚀 Deployment + Branch Preview _soon_
 
 ---
 
@@ -58,10 +63,11 @@ Base commands for develop, test and build.
 
 - Node.js Toolchain Manager: [Volta](https://volta.sh)
 - Package Manager: [pnpm](https://pnpm.io/installation)
+- HTTP(S) Web Server: [Caddy](https://caddyserver.com/) *optional
 
 **Prepare Development**
 
-A **Makefile** is used to orchestrate the installation of required tooling and dependencies. Open your Terminal app and run the command bellow, then you are able to get started.
+A **Makefile** is used to orchestrate the installation of required tooling and dependencies. Open your Terminal app and run the command bellow, then you are able to get started. **Make sure to install Caddy to enable HTTPS on Dev.**
 
 ```sh
 make
@@ -76,7 +82,8 @@ make
 The next command will spawn the Dev Server and load the environment variables from `.env`.
 
 ```sh
-pnpm dev # spawns the Dev Server at http://localhost:3000
+pnpm dev        # spawns the Dev Server at http://localhost:3000
+pnpm dev:secure # spawns Caddy and the Dev Server at https://localhost:3000
 ```
 
 **Testing**
@@ -166,7 +173,7 @@ pnpm cleanup:hard # same as above but also remove `node_modules`
 
 ## Troubleshooting
 
-**Fail while using the `make` command:** Behind the scenes this command depends on `cURL` for downloading Volta and pnpm binaries. Try installing cURL then run the command again. Also, the commands from Makefile are **not supported on Windows** machines so the alternative is manually installing the required dependencies.
+**Fail while using the `make` command:** Behind the scenes this command depends on `cURL` for downloading Volta and pnpm binaries. Try installing cURL then run the command again. Also, the commands from Makefile are **not supported on Windows** machines so the alternative is to manually installing the required dependencies.
 
 ---
 
