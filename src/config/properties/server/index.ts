@@ -1,4 +1,4 @@
-import merge from "lodash.merge";
+import merge from "lodash/merge";
 
 import base from "./base.json";
 import dev from "./dev.json";
