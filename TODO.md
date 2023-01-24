@@ -29,4 +29,4 @@
 
 - [ ] Analytics with Google Analytics - Optional
 - [ ] Observability with New Relic - Optional
-- [ ] Web Vitals Report
+- [x] Web Vitals Report

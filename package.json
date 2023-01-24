@@ -107,9 +107,10 @@
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
+      "src/modules/**/*.{ts,tsx}",
+      "src/utilities/**/*.{ts,tsx}",
       "!**/node_modules/**",
-      "!src/**/index.ts"
+      "!src/**/index.{ts,tsx}"
     ]
   },
   "eslintConfig": {

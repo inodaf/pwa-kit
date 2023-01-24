@@ -1,4 +1,4 @@
-all: node_modules Caddyfile public/mockServiceWorker.js
+all: node_modules Caddyfile .env public/mockServiceWorker.js
 
 node_modules: package.json pnpm-lock.yaml
 	@echo '⚡️ Installing Volta...'
@@ -8,6 +8,10 @@ node_modules: package.json pnpm-lock.yaml
 	@echo '🧱 Setting up project...'
 	@volta fetch node@16.15.1
 	@pnpm install
+
+.env:
+	@echo '🔑 Setting up .env...'
+	@touch .env
 
 public/mockServiceWorker.js:
 	@echo '🥸 Finishing MSW Setup...'

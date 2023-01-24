@@ -3,11 +3,11 @@ import type { AppProps } from "next/app";
 import React from "react";
 import Head from "next/head";
 
-import { AppProviders } from "@/configurations/providers";
-import { collectWebVitals } from "@/configurations/logging/web-vitals";
+import { AppProviders } from "@/config/providers";
+import { collectWebVitals } from "@/config/logging/web-vitals";
 
-import "@/configurations/workers/mocks";
-import "@/configurations/styles/globals.css";
+import "@/config/workers/mocks";
+import "@/config/styles/globals.css";
 
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -136,8 +136,8 @@ The properties from `base` holds all the default configuration that applies for 
 In short, when `APP_ENV` and `NEXT_PUBLIC_APP_ENV` is set to `production`, `base` and `production` property files will be loaded and merged. Then they can be accessed through the application as bellow:
 
 ```ts
-import { properties as serverProperties } from "@/config/properties/server";
-import { properties as clientProperties } from "@/config/properties/client";
+import { serverProperties } from "@/config/properties/server";
+import { clientProperties } from "@/config/properties/client";
 ```
 
 ---
