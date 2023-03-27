@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 0 1 * *" # Run every month
 
+env:
+  BRANCH_NAME: main
+
 jobs:
   # Setup Node.js and update
   # dev dependencies.
