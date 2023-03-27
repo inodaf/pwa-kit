@@ -22,7 +22,7 @@ jobs:
       - name: "Updating Dependencies"
         run: |
           chmod +x .github/bin/update_deps.sh
-          ./.github/bin/update_deps.sh
+          source .github/bin/update_deps.sh
       - name: "Opening Pull Request"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

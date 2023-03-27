@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Update "devDependencies" to their latest version
-# and commits the changes.
+# and commit the changes.
 
-BRANCH_NAME="update-dev-deps-`date +%s`"
+export BRANCH_NAME="update-dev-deps-`date +%s`"
 
 setup() {
   if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;
