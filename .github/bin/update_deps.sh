@@ -4,6 +4,7 @@
 # and commit the changes.
 
 export BRANCH_NAME="update-dev-deps-`date +%s`"
+echo "::set-env name=BRANCH_NAME::$BRANCH_NAME"
 
 setup() {
   if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;

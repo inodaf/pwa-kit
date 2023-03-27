@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "0 0 1 * *" # Run every month
 
-env:
-  BRANCH_NAME: main
-
 jobs:
   # Setup Node.js and update
   # dev dependencies.
@@ -31,4 +28,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh pr create --fill
       - name: "Run Check Workflow"
-        run: gh workflow run check.yml --ref $BRANCH_NAME
+        run: gh workflow run check.yml --ref ${{ env.BRANCH_NAME }}
