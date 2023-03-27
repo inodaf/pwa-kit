@@ -1,5 +1,7 @@
 name: check
-on: pull_request
+on:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   # Setup Node.js and install
