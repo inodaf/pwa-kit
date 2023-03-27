@@ -3,8 +3,7 @@
 # Update "devDependencies" to their latest version
 # and commit the changes.
 
-export BRANCH_NAME="update-dev-deps-`date +%s`"
-echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+BRANCH_NAME="update-dev-deps-`date +%s`"
 
 setup() {
   if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;

@@ -2,6 +2,9 @@ name: check
 on:
   pull_request:
   workflow_dispatch:
+  push:
+    branches:
+      - 'update-dev-deps-**'
 
 jobs:
   # Setup Node.js and install
