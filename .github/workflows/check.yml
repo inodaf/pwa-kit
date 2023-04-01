@@ -2,26 +2,8 @@ name: check
 on: pull_request
 
 jobs:
-  # Setup Node.js and install
-  # project dependencies with pnpm.
-  setup:
-    if: false
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16.15.1"
-          cache: "pnpm"
-      - name: "Installing Dependencies"
-        run: pnpm install
-
-  # Check source code for lints.
+  # Check source code: Lint, Format and Test
   checks:
-#    needs: setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -35,58 +17,3 @@ jobs:
       - run: pnpm install
       - name: "Check Linting, Formatting and Tests"
         run: pnpm ci
-
-  # Check source code for lints.
-  lint:
-    if: false
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16.15.1"
-          cache: "pnpm"
-      - run: pnpm install
-      - name: "Check Linting"
-        run: pnpm lint:check
-
-  # Check source code formatting issues.
-  format:
-    if: false
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16.15.1"
-          cache: "pnpm"
-      - run: pnpm install
-      - name: "Check Format"
-        run: pnpm fmt:check
-
-  # Runs the tests without
-  # generating the Coverage report.
-  test:
-    if: false
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16.15.1"
-          cache: "pnpm"
-      - run: pnpm install
-      - name: "Testing"
-        run: pnpm test
