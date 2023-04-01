@@ -20,7 +20,8 @@
     "t": "pnpm test",
     "test:e2e": "E2E_BASE_URL=http://localhost:3000 pnpm playwright test -x -c tests/config/e2e/setup.ts",
     "cleanup": "pnpm rimraf .next coverage",
-    "cleanup:hard": "pnpm cleanup -- node_modules"
+    "cleanup:hard": "pnpm cleanup -- node_modules",
+    "ci": "concurrently \"pnpm t\" \"pnpm fmt:check\" \"pnpm lint:check\" "
   },
   "dependencies": {
     "@tanstack/react-query": "^4.28.0",
