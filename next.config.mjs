@@ -4,7 +4,6 @@ import csp from "./src/config/security/csp.mjs";
 
 /** @type {import('next').NextConfig} */
 const config = {
-  swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,

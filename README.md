@@ -7,7 +7,7 @@
       <img src="https://img.shields.io/badge/Testing-Jest-pink.svg" />
       <img src="https://img.shields.io/badge/Format-Prettier-coral.svg" />
       <img src="https://img.shields.io/badge/Linting-TypeScript_ESLint-blue.svg" />
-      <img src="https://img.shields.io/badge/Node.js-v16.15.1-gren.svg" />
+      <img src="https://img.shields.io/badge/Node.js-v18.16.0-green.svg" />
     </div>
   </div>
 </h1>

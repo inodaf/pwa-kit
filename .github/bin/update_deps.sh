@@ -6,8 +6,6 @@
 BRANCH_NAME="update-dev-deps-`date +%s`"
 
 setup() {
-  if [[ -z $GITHUB_ACTIONS ]]; then exit; fi;
-
   git config user.email "<>"
   git config user.name "GitHub Actions Bot"
 
@@ -35,4 +33,8 @@ commit() {
   fi
 }
 
-setup && work && commit
+if [[ -z $GITHUB_ACTIONS ]]; then 
+  work
+else
+  setup && work && commit
+fi;

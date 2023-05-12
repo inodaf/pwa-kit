@@ -6,7 +6,7 @@ node_modules: package.json pnpm-lock.yaml
 	@echo '📚 Installing pnpm...'
 	@[ -z "$(which pnpm)" ] && curl -fsSL https://get.pnpm.io/install.sh | sh -
 	@echo '🧱 Setting up project...'
-	@volta fetch node@16.15.1
+	@volta fetch node@18.16.0
 	@pnpm install
 
 .env:
