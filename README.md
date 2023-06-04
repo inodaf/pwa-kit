@@ -27,7 +27,7 @@ Starting a new Web App needs to be easy. **PWA Kit** provides a fully featured e
 
 **Quality**
 
-- 🧑‍🔬 Testing with [Jest](https://jestjs.io) + swc + @testing-library(react, hooks) + **Coverage Reports**
+- 🧑‍🔬 Testing with [Jest](https://jestjs.io) + swc + @testing-library + **Coverage Reports**
 - 🐞 Linting with [TypeScript ESLint](https://typescript-eslint.io)
 - 📝 Code Format with [Prettier](https://prettier.io)
 - 🥸 GraphQL and REST API mocking with [MSW](https://mswjs.io)
@@ -127,7 +127,7 @@ Sensitive and secret data can be defined using Environment Variables. An `.env` 
 
 ## Application Properties
 
-Also known as _Configuration_, application properties let you define environment-specific, static configuration for your system. Unlike Environment Variables, Properties cannot include sensitive values.
+Application properties let you define environment-specific, static configuration for your system. Unlike Environment Variables, Properties cannot include sensitive values.
 
 There are the `base`, `dev`, `production` and `staging` properties but it's possible to add many others, as they are named based on the value of `APP_ENV` and `NEXT_PUBLIC_APP_ENV` environment variable. Also they are separated by `client` and `server`.
 

@@ -13,16 +13,14 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>WebApp</title>
+        <title>PWA Kit</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="My WebApp bootstrapped from inodaf/pwa-starter"
+          content="My Web App bootstrapped with inodaf/pwa-starter"
         />
-        <link
-          rel="apple-touch-icon"
-          href="/add-your-192-apple-touch-icon.png"
-        />
+        <link rel="apple-touch-icon" href="/projecticon.svg" />
+        <link rel="icon" href="/projecticon.svg" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"

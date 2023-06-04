@@ -7,7 +7,7 @@ const config = {
   reactStrictMode: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  headers: () => [
+  headers: async () => [
     {
       source: "/:path*",
       headers: [
@@ -24,5 +24,5 @@ export default pwa({
   register: true,
   mode: "production",
   disable: process.env.NODE_ENV !== "production",
-  customWorkerDir: "src/configurations/workers",
+  customWorkerDir: "src/config/workers",
 })(config);
