@@ -29,4 +29,4 @@ jobs:
         run: |
           gh pr create --fill
           git commit --allow-empty -m "Trigger CI"
-          git push
+          git push --set-upstream origin $BRANCH_NAME
