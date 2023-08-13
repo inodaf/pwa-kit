@@ -26,4 +26,7 @@ jobs:
       - name: "Opening Pull Request"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr create --fill
+        run: |
+          gh pr create --fill
+          git commit --allow-empty -m "Trigger CI"
+          git push origin $BRANCH_NAME

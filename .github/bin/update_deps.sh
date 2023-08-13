@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Update "devDependencies" to their latest version
+# Update all dependencies to their latest version
 # and commit the changes.
 
-BRANCH_NAME="update-dev-deps-`date +%s`"
+export BRANCH_NAME="update-dev-deps-`date +%s`"
 
 setup() {
   git config user.email "<>"
