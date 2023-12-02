@@ -1,7 +1,7 @@
 <h1>
   <img src="./.github/projecticon.svg" width="96" alt="an icon with tones of purple background and 4 lines representing a fast motion." />
   <div>
-    PWA Kit · Enterprise Apps
+    PWA Kit
     <div>
       <img src="https://img.shields.io/badge/TypeScript-Next.js%20-white.svg" />
       <img src="https://img.shields.io/badge/Testing-Jest-pink.svg" />
@@ -12,7 +12,7 @@
   </div>
 </h1>
 
-Starting a new Web App needs to be easy. **PWA Kit** provides a fully featured environment with **Next.js** + **TypeScript** and let you focus on code delivery without compromising best practices.
+Web Development needs to be productive and frictionless. **PWA Kit** offers a rich development environment with stable and battle-tested tools like **Next.js** + **TypeScript**. Its simplicity focus on delivery with best practices and smooth onboarding experience for all team members.
 
 ## The Stack
 
@@ -61,13 +61,13 @@ Base commands for develop, test and build.
 
 **Requirements**
 
-- Node.js Toolchain Manager: [Volta](https://volta.sh)
-- Package Manager: [pnpm](https://pnpm.io/installation)
-- HTTP(S) Web Server: [Caddy](https://caddyserver.com/) *optional
+- <img width="16" height="16" src="https://nodejs.org/static/images/favicons/favicon.png" /> Node.js Toolchain Manager: [Volta](https://volta.sh)
+- <img width="16" height="16" src="https://docs.npmjs.com/favicon-32x32.png?v=c2963dcad859b2b320d26051c38197fe" alt="npm logo" /> Package Manager: [npm](https://pnpm.io/installation)
+- <img width="16" height="16" src="https://caddyserver.com/resources/images/favicon.png?v=5a994ae" /> HTTP(S) Web Server: [Caddy](https://caddyserver.com/) _optional_
 
 **Prepare Development**
 
-A **Makefile** is used to orchestrate the installation of required tooling and dependencies. Open your Terminal app and run the command bellow, then you are able to get started. **Make sure to install Caddy to enable HTTPS on Dev.**
+A **Makefile** is used to orchestrate the installation of required tooling and dependencies. To get started, open a Terminal session and run the command bellow. **Make sure to install Caddy manually to enable HTTPS on Dev.**
 
 ```sh
 make
@@ -127,7 +127,7 @@ Sensitive and secret data can be defined using Environment Variables. An `.env` 
 
 ## Application Properties
 
-Application properties let you define environment-specific, static configuration for your system. Unlike Environment Variables, Properties cannot include sensitive values.
+Application properties define environment-specific, static configuration for the app. Unlike Environment Variables, Properties cannot include sensitive values.
 
 There are the `base`, `dev`, `production` and `staging` properties but it's possible to add many others, as they are named based on the value of `APP_ENV` and `NEXT_PUBLIC_APP_ENV` environment variable. Also they are separated by `client` and `server`.
 
@@ -162,7 +162,7 @@ pnpm start:stag # start the built app with staging bindings
 
 ## Cleanup
 
-Whenever you need a fresh start in case something is going wrong, you can leverage handy cleanup commands.
+When a fresh start is needed in case something is going wrong, use the available cleanup commands.
 
 ```sh
 pnpm cleanup      # remove caches and temp files
@@ -179,4 +179,4 @@ pnpm cleanup:hard # same as above but also remove `node_modules`
 
 ## License
 
-Although this **template** is MIT licensed, if needed, you must change the license after creating your project.
+Although this **template** is MIT licensed, if needed, change the license after using this template.

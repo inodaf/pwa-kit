@@ -21,3 +21,9 @@ public/mockServiceWorker.js:
 Caddyfile:
 	@echo '🔒 Setting up Caddy...'
 	@echo 'localhost:3000 \n\nreverse_proxy 127.0.0.1:3001' > Caddyfile
+
+cleanup:
+	@echo '🧹 Cleaning up...'
+
+test:
+	@APP_ENV=dev NEXT_PUBLIC_APP_ENV=dev npm exec jest -i
